@@ -2,71 +2,74 @@
 using System.Collections.Generic;
 using System.Text;
 
-public class Car
+namespace _07._Raw_Data
 {
-    private string model;
-    private Engine engine;
-    private Cargo cargo;
-    private List<Tire> tires;
-
-    public Car(string model, Engine engine, Cargo cargo, List<Tire> tires)
+    public class Car
     {
-        this.Model = model;
-        this.Engine = engine;
-        this.Cargo = cargo;
-        this.Tires = tires;
-    }
+        private string model;
+        private Engine engine;
+        private Cargo cargo;
+        private List<Tire> tires;
 
-    public List<Tire> Tires
-    {
-        get
+        public Car(string model, Engine engine, Cargo cargo, List<Tire> tires)
         {
-            return tires;
+            this.Model = model;
+            this.Engine = engine;
+            this.Cargo = cargo;
+            this.Tires = tires;
         }
-        set
-        {
-            tires = value;
-        }
-    }
 
-    public Cargo Cargo
-    {
-        get
+        public List<Tire> Tires
         {
-            return cargo;
+            get
+            {
+                return tires;
+            }
+            set
+            {
+                tires = value;
+            }
         }
-        set
-        {
-            cargo = value;
-        }
-    }
 
-    public Engine Engine
-    {
-        get
+        public Cargo Cargo
         {
-            return engine;
+            get
+            {
+                return cargo;
+            }
+            set
+            {
+                cargo = value;
+            }
         }
-        set
-        {
-            engine = value;
-        }
-    }
 
-    public string Model
-    {
-        get
+        public Engine Engine
         {
-            return model;
+            get
+            {
+                return engine;
+            }
+            set
+            {
+                engine = value;
+            }
         }
-        set
-        {
-            model = value;
-        }
-    }
 
-    public override string ToString()
-    {
-        return this.Model;
+        public string Model
+        {
+            get
+            {
+                return model;
+            }
+            set
+            {
+                model = value;
+            }
+        }
+
+        public override string ToString()
+        {
+            return this.Model;
+        }
     }
 }

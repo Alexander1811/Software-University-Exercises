@@ -2,39 +2,41 @@
 using System.Collections.Generic;
 using System.Text;
 
-public class Engine
+namespace _07._Raw_Data
 {
-    private int speed;
-    private int power;
-
-    public Engine(int speed, int power)
+    public class Engine
     {
-        this.Speed = speed;
-        this.Power = power;
-    }
+        private int speed;
+        private int power;
 
-    public int Power
-    {
-        get
+        public Engine(int speed, int power)
         {
-            return power;
+            this.Speed = speed;
+            this.Power = power;
         }
-        set
+
+        public int Power
         {
-            power = value;
+            get
+            {
+                return power;
+            }
+            set
+            {
+                power = value;
+            }
+        }
+
+        public int Speed
+        {
+            get
+            {
+                return speed;
+            }
+            set
+            {
+                speed = value;
+            }
         }
     }
-
-    public int Speed
-    {
-        get
-        {
-            return speed;
-        }
-        set
-        {
-            speed = value;
-        }
-    }
-
 }

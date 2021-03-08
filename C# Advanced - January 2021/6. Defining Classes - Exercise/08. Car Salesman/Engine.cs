@@ -2,95 +2,98 @@
 using System.Collections.Generic;
 using System.Text;
 
-public class Engine
+namespace _08._Car_Salesman
 {
-    private string model;
-    private int power;
-    private int displacement;
-    private string efficiency;
-
-    public Engine(string model, int power)
+    public class Engine
     {
-        this.Model = model;
-        this.Power = power;
-    }
+        private string model;
+        private int power;
+        private int displacement;
+        private string efficiency;
 
-    public Engine(string model, int power, int displacement)
-        : this(model, power)
-    {
-        this.Displacement = displacement;
-    }
-
-    public Engine(string model, int power, string efficiency)
-        : this(model, power)
-    {
-        this.Efficiency = efficiency;
-    }
-
-    public Engine(string model, int power, int displacement, string efficiency)
-        : this(model, power)
-    {
-        this.Displacement = displacement;
-        this.Efficiency = efficiency;
-    }
-
-    public string Efficiency
-    {
-        get
+        public Engine(string model, int power)
         {
-            return efficiency;
+            this.Model = model;
+            this.Power = power;
         }
-        set
-        {
-            efficiency = value;
-        }
-    }
 
-    public int Displacement
-    {
-        get
+        public Engine(string model, int power, int displacement)
+            : this(model, power)
         {
-            return displacement;
+            this.Displacement = displacement;
         }
-        set
-        {
-            displacement = value;
-        }
-    }
 
-    public int Power
-    {
-        get
+        public Engine(string model, int power, string efficiency)
+            : this(model, power)
         {
-            return power;
+            this.Efficiency = efficiency;
         }
-        set
+
+        public Engine(string model, int power, int displacement, string efficiency)
+            : this(model, power)
         {
-            power = value;
+            this.Displacement = displacement;
+            this.Efficiency = efficiency;
         }
-    }
 
-    public string Model
-    {
-        get
+        public string Efficiency
         {
-            return model;
+            get
+            {
+                return efficiency;
+            }
+            set
+            {
+                efficiency = value;
+            }
         }
-        set
+
+        public int Displacement
         {
-            model = value;
+            get
+            {
+                return displacement;
+            }
+            set
+            {
+                displacement = value;
+            }
         }
-    }
+
+        public int Power
+        {
+            get
+            {
+                return power;
+            }
+            set
+            {
+                power = value;
+            }
+        }
+
+        public string Model
+        {
+            get
+            {
+                return model;
+            }
+            set
+            {
+                model = value;
+            }
+        }
 
 
-    public override string ToString()
-    {
-        StringBuilder builder = new StringBuilder();
-        builder.AppendLine($"  {Model}:");
-        builder.AppendLine($"    Power: {Power}");
-        builder.AppendLine($"    Displacement: {(Displacement == 0 ? "n/a" : Displacement.ToString())}");
-        builder.AppendLine($"    Efficiency: {(Efficiency == null ? "n/a" : Efficiency.ToString())}");
+        public override string ToString()
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine($"  {Model}:");
+            builder.AppendLine($"    Power: {Power}");
+            builder.AppendLine($"    Displacement: {(Displacement == 0 ? "n/a" : Displacement.ToString())}");
+            builder.AppendLine($"    Efficiency: {(Efficiency == null ? "n/a" : Efficiency.ToString())}");
 
-        return builder.ToString();
+            return builder.ToString();
+        }
     }
 }

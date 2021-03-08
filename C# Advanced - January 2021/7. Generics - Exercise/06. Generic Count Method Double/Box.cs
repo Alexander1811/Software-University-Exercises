@@ -1,26 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-public class Box<T> : IComparable<T>
-    where T : IComparable<T>
+
+namespace _06._Generic_Count_Method_Double
 {
-    private T value;
-
-    public Box(T value)
+    public class Box<T> : IComparable<T>
+        where T : IComparable<T>
     {
-        this.value = value;
-    }
+        private T value;
 
-    public int CompareTo(T other)
-    {
-        return this.value.CompareTo(other);
-    }
+        public Box(T value)
+        {
+            this.value = value;
+        }
 
-    public override string ToString()
-    {
-        string name = this.value.GetType().FullName;
-        T value = this.value;
-        return $"{name}: {value}";
+        public int CompareTo(T other)
+        {
+            return this.value.CompareTo(other);
+        }
+
+        public override string ToString()
+        {
+            string name = this.value.GetType().FullName;
+            T value = this.value;
+            return $"{name}: {value}";
+        }
     }
 }
-

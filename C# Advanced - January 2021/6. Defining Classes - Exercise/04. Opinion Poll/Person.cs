@@ -1,4 +1,4 @@
-﻿namespace DefiningClasses
+﻿namespace _04._Opinion_Poll
 {
     public class Person
     {

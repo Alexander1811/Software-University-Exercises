@@ -2,39 +2,42 @@
 using System.Collections.Generic;
 using System.Text;
 
-public class Cargo
+namespace _07._Raw_Data
 {
-    private int weight;
-    private string type;
-
-    public Cargo(int weight, string type)
+    public class Cargo
     {
-        this.Weight = weight;
-        this.Type = type;
-    }
+        private int weight;
+        private string type;
 
-    public string Type
-    {
-        get
+        public Cargo(int weight, string type)
         {
-            return type;
+            this.Weight = weight;
+            this.Type = type;
         }
-        set
-        {
-            type = value;
-        }
-    }
 
-    public int Weight
-    {
-        get
+        public string Type
         {
-            return weight;
+            get
+            {
+                return type;
+            }
+            set
+            {
+                type = value;
+            }
         }
-        set
-        {
-            weight = value;
-        }
-    }
 
+        public int Weight
+        {
+            get
+            {
+                return weight;
+            }
+            set
+            {
+                weight = value;
+            }
+        }
+
+    }
 }

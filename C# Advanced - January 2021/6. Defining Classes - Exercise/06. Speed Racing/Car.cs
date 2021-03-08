@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DefiningClasses
+namespace _06._Speed_Racing
 {
     class Car
     {

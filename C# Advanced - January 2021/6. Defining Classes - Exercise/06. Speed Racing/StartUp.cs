@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DefiningClasses
+namespace _06._Speed_Racing
 {
     public class StartUp
     {

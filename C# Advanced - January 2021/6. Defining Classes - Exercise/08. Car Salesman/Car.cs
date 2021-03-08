@@ -2,95 +2,98 @@
 using System.Collections.Generic;
 using System.Text;
 
-public class Car
+namespace _08._Car_Salesman
 {
-    private string model;
-    private Engine engine;
-    private int weight;
-    private string color;
-
-    public Car(string model, Engine engine)
+    public class Car
     {
-        this.Model = model;
-        this.Engine = engine;
-    }
+        private string model;
+        private Engine engine;
+        private int weight;
+        private string color;
 
-    public Car(string model, Engine engine, int weight)
-        : this(model, engine)
-    {
-        this.Weight = weight;
-    }
-
-    public Car(string model, Engine engine, string color)
-        : this(model, engine)
-    {
-        this.Color = color;
-    }
-
-    public Car(string model, Engine engine, int weight, string color)
-        : this(model, engine)
-    {
-        this.Weight = weight;
-        this.Color = color;
-    }
-
-    public string Color
-    {
-        get
+        public Car(string model, Engine engine)
         {
-            return color;
+            this.Model = model;
+            this.Engine = engine;
         }
-        set
-        {
-            color = value;
-        }
-    }
 
-    public int Weight
-    {
-        get
+        public Car(string model, Engine engine, int weight)
+            : this(model, engine)
         {
-            return weight;
+            this.Weight = weight;
         }
-        set
-        {
-            weight = value;
-        }
-    }
 
-    public Engine Engine
-    {
-        get
+        public Car(string model, Engine engine, string color)
+            : this(model, engine)
         {
-            return engine;
+            this.Color = color;
         }
-        set
+
+        public Car(string model, Engine engine, int weight, string color)
+            : this(model, engine)
         {
-            engine = value;
+            this.Weight = weight;
+            this.Color = color;
         }
-    }
 
-    public string Model
-    {
-        get
+        public string Color
         {
-            return model;
+            get
+            {
+                return color;
+            }
+            set
+            {
+                color = value;
+            }
         }
-        set
+
+        public int Weight
         {
-            model = value;
+            get
+            {
+                return weight;
+            }
+            set
+            {
+                weight = value;
+            }
         }
-    }
 
-    public override string ToString()
-    {
-        StringBuilder builder = new StringBuilder();
+        public Engine Engine
+        {
+            get
+            {
+                return engine;
+            }
+            set
+            {
+                engine = value;
+            }
+        }
 
-        builder.AppendLine($"{Model}:");
-        builder.Append(Engine);
-        builder.AppendLine($"  Weight: {(Weight == 0 ? "n/a" : Weight.ToString())}");
-        builder.Append($"  Color: {(Color == null ? "n/a" : Color)}");
+        public string Model
+        {
+            get
+            {
+                return model;
+            }
+            set
+            {
+                model = value;
+            }
+        }
 
-        return builder.ToString();
+        public override string ToString()
+        {
+            StringBuilder builder = new StringBuilder();
+
+            builder.AppendLine($"{Model}:");
+            builder.Append(Engine);
+            builder.AppendLine($"  Weight: {(Weight == 0 ? "n/a" : Weight.ToString())}");
+            builder.Append($"  Color: {(Color == null ? "n/a" : Color)}");
+
+            return builder.ToString();
+        }
     }
 }

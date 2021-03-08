@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Generics___Exercise
+namespace _08._Threeuple
 {
     class Program
     {

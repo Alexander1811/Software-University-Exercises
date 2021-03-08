@@ -1,4 +1,4 @@
-﻿namespace DefiningClasses
+﻿namespace _01.Defining_a_Class_Person
 {
     public class Person
     {

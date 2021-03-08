@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Generics___Exercise
+namespace _04._Generic_Swap_Method_Integer
 {
     class Program
     {

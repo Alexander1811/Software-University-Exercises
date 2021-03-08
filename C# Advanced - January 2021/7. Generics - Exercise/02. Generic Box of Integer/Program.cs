@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Generics___Exercise
+namespace _02._Generic_Box_of_Integer
 {
     class Program
     {

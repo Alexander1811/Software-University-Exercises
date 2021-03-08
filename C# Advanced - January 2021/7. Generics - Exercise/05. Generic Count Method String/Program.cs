@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Generics___Exercise
+namespace _05._Generic_Count_Method_String
 {
     class Program
     {

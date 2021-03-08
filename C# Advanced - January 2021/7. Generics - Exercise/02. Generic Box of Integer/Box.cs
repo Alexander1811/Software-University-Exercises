@@ -1,20 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-public class Box<T>
+
+namespace _02._Generic_Box_of_Integer
 {
-    private T value;
-
-    public Box(T value)
+    public class Box<T>
     {
-        this.value = value;
-    }
+        private T value;
 
-    public override string ToString()
-    {
-        string name = this.value.GetType().FullName;
-        T value = this.value;
-        return $"{name}: {value}";
+        public Box(T value)
+        {
+            this.value = value;
+        }
+
+        public override string ToString()
+        {
+            string name = this.value.GetType().FullName;
+            T value = this.value;
+            return $"{name}: {value}";
+        }
     }
 }
-

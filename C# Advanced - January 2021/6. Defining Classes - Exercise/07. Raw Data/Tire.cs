@@ -2,38 +2,41 @@
 using System.Collections.Generic;
 using System.Text;
 
-public class Tire
+namespace _07._Raw_Data
 {
-    private double pressure;
-    private int age;
-
-    public Tire(double pressure, int age)
+    public class Tire
     {
-        this.Pressure = pressure;
-        this.Age = age;
-    }
+        private double pressure;
+        private int age;
 
-    public int Age
-    {
-        get
+        public Tire(double pressure, int age)
         {
-            return age;
+            this.Pressure = pressure;
+            this.Age = age;
         }
-        set
-        {
-            age = value;
-        }
-    }
 
-    public double Pressure
-    {
-        get
+        public int Age
         {
-            return pressure;
+            get
+            {
+                return age;
+            }
+            set
+            {
+                age = value;
+            }
         }
-        set
+
+        public double Pressure
         {
-            pressure = value;
+            get
+            {
+                return pressure;
+            }
+            set
+            {
+                pressure = value;
+            }
         }
     }
 }
