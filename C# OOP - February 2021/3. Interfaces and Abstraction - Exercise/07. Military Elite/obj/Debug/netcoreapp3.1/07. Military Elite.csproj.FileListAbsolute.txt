@@ -1,0 +1,12 @@
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\07. Military Elite\bin\Debug\netcoreapp3.1\07. Military Elite.exe
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\07. Military Elite\bin\Debug\netcoreapp3.1\07. Military Elite.deps.json
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\07. Military Elite\bin\Debug\netcoreapp3.1\07. Military Elite.runtimeconfig.json
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\07. Military Elite\bin\Debug\netcoreapp3.1\07. Military Elite.runtimeconfig.dev.json
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\07. Military Elite\bin\Debug\netcoreapp3.1\07. Military Elite.dll
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\07. Military Elite\bin\Debug\netcoreapp3.1\07. Military Elite.pdb
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\07. Military Elite\obj\Debug\netcoreapp3.1\07. Military Elite.csproj.CoreCompileInputs.cache
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\07. Military Elite\obj\Debug\netcoreapp3.1\07. Military Elite.AssemblyInfoInputs.cache
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\07. Military Elite\obj\Debug\netcoreapp3.1\07. Military Elite.AssemblyInfo.cs
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\07. Military Elite\obj\Debug\netcoreapp3.1\07. Military Elite.dll
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\07. Military Elite\obj\Debug\netcoreapp3.1\07. Military Elite.pdb
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\07. Military Elite\obj\Debug\netcoreapp3.1\07. Military Elite.genruntimeconfig.cache

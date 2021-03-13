@@ -1,0 +1,13 @@
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\bin\Debug\netcoreapp3.1\01. Define an Interface IPerson.exe
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\bin\Debug\netcoreapp3.1\01. Define an Interface IPerson.deps.json
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\bin\Debug\netcoreapp3.1\01. Define an Interface IPerson.runtimeconfig.json
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\bin\Debug\netcoreapp3.1\01. Define an Interface IPerson.runtimeconfig.dev.json
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\bin\Debug\netcoreapp3.1\01. Define an Interface IPerson.dll
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\bin\Debug\netcoreapp3.1\01. Define an Interface IPerson.pdb
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\obj\Debug\netcoreapp3.1\01. Define an Interface IPerson.csprojAssemblyReference.cache
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\obj\Debug\netcoreapp3.1\01. Define an Interface IPerson.csproj.CoreCompileInputs.cache
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\obj\Debug\netcoreapp3.1\01. Define an Interface IPerson.AssemblyInfoInputs.cache
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\obj\Debug\netcoreapp3.1\01. Define an Interface IPerson.AssemblyInfo.cs
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\obj\Debug\netcoreapp3.1\01. Define an Interface IPerson.dll
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\obj\Debug\netcoreapp3.1\01. Define an Interface IPerson.pdb
+C:\Users\1\source\repos\Interfaces and Abstraction - Exercise\01. Define an Interface IPerson\obj\Debug\netcoreapp3.1\01. Define an Interface IPerson.genruntimeconfig.cache
