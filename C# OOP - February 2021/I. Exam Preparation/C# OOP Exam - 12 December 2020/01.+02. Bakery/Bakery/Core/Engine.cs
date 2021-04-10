@@ -1,9 +1,9 @@
 ﻿namespace Bakery.Core
 {
+    using System;
     using Bakery.Core.Contracts;
     using Bakery.IO;
     using Bakery.IO.Contracts;
-    using System;
 
     public class Engine : IEngine
     {

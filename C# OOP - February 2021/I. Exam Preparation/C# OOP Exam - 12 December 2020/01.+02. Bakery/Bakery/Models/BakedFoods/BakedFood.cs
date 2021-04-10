@@ -1,7 +1,7 @@
-﻿using Bakery.Models.BakedFoods.Contracts;
+﻿using System;
+using Bakery.Models.BakedFoods.Contracts;
 using Bakery.Utilities;
 using Bakery.Utilities.Messages;
-using System;
 
 namespace Bakery.Models.BakedFoods
 {

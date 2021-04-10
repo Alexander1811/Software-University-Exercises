@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Players_and_Monsters.Common
 {
     public static class Validator

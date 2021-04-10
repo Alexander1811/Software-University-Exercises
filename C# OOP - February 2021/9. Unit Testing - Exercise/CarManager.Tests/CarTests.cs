@@ -11,7 +11,7 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
-            car = new Car("Make", "Model", 10, 100);
+            this.car = new Car("Make", "Model", 10, 100);
         }
 
         [Test]
@@ -23,7 +23,7 @@ namespace Tests
         [TestCase("Make", "Model", -10, 100)]
         [TestCase("Make", "Model", 10, 0)]
         [TestCase("Make", "Model", 10, -50)]
-        public void Ctor_ThrowsException_WhenDataIsInalid(string make, string model, double fuelConsumption, double fuelCapacity)
+        public void Ctor_ThrowsException_WhenDataIsInValid(string make, string model, double fuelConsumption, double fuelCapacity)
         {
             Assert.Throws<ArgumentException>(() => new Car(make, model, fuelConsumption, fuelCapacity));
         }
