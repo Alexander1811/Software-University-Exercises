@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace Guild
 {
@@ -10,22 +8,25 @@ namespace Guild
         {
             this.Name = name;
             this.Class = classType;
-            this.Rank = "Trial";
-            this.Description = "n/a";
         }
+
         public string Name { get; private set; }
+
         public string Class { get; private set; }
-        public string Rank { get; set; }
-        public string Description { get; set; }
+
+        public string Rank { get; set; } = "Trial";
+
+        public string Description { get; set; } = "n/a";
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Player {Name}: {Class}");
-            sb.AppendLine($"Rank: {Rank}");
-            sb.AppendLine($"Description: {Description}");
 
-            return sb.ToString().TrimEnd(); 
+            sb.AppendLine($"Player {this.Name}: {this.Class}");
+            sb.AppendLine($"Rank: {this.Rank}");
+            sb.AppendLine($"Description: {this.Description}");
+
+            return sb.ToString().Trim(); 
         }
     }
 }

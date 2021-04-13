@@ -1,109 +1,145 @@
 ﻿using System;
 
-namespace _02._Re_Volt
+namespace ReVolt
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int dimension = int.Parse(Console.ReadLine());
-            int commandsCount = int.Parse(Console.ReadLine());
-
-            char[,] matrix = new char[dimension, dimension];
+            bool hasWin = false;
 
             int playerRow = 0;
-            int playerColumn = 0;
+            int playerCol = 0;
 
-            bool hasWon = false;
+            int size = int.Parse(Console.ReadLine());
+            int commandsCount = int.Parse(Console.ReadLine());
 
-            for (int currentRow = 0; currentRow < matrix.GetLength(0); currentRow++)
+            char[,] matrix = new char[size, size];
+
+            for (int row = 0; row < size; row++)
             {
-                string line = Console.ReadLine();
-                for (int currentColumn = 0; currentColumn < matrix.GetLength(1); currentColumn++)
+                string currentRow = Console.ReadLine();
+
+                for (int col = 0; col < matrix.GetLength(0); col++)
                 {
-                    matrix[currentRow, currentColumn] = line[currentColumn];
-                    if (matrix[currentRow, currentColumn] == 'f')
+                    matrix[row, col] = currentRow[col];
+
+                    GetPlayerCoordinates(ref playerRow, ref playerCol, matrix, row, col);
+                }
+            }
+
+            matrix[playerRow, playerCol] = '-';
+
+            for (int index = 0; index < commandsCount; index++)
+            {
+                string command = Console.ReadLine();
+
+                MovePlayer(matrix, playerRow, playerCol, command);
+
+                if (hasWin == true)
+                {
+                    break;
+                }
+            }
+
+            void MovePlayer(char[,] matrixInput, int x, int y, string move)
+            {
+                if (move == "down")
+                {
+                    bool isInside = CheckIfPlayerIsInField(matrixInput, x + 1, y);
+
+                    playerRow = isInside == true ? playerRow + 1 : 0;
+
+                    if (matrixInput[playerRow, playerCol] == 'B')
                     {
-                        playerRow = currentRow;
-                        playerColumn = currentColumn;
+                        MovePlayer(matrix, playerRow, playerCol, "down");
+                    }
+                    else if (matrixInput[playerRow, playerCol] == 'T')
+                    {
+                        MovePlayer(matrix, playerRow, playerCol, "up");
+                    }
+                    else if (matrixInput[playerRow, playerCol] == 'F')
+                    {
+                        Console.WriteLine("Player won!");
+                        hasWin = true;
+                    }
+                }
+                else if (move == "up")
+                {
+                    bool isInside = CheckIfPlayerIsInField(matrixInput, x - 1, y);
+
+                    playerRow = isInside == true ? playerRow - 1 : matrixInput.Length - 1;
+
+                    if (matrixInput[playerRow, playerCol] == 'B')
+                    {
+                        MovePlayer(matrix, playerRow, playerCol, "up");
+                    }
+                    else if (matrixInput[playerRow, playerCol] == 'T')
+                    {
+                        MovePlayer(matrix, playerRow, playerCol, "down");
+                    }
+                    else if (matrixInput[playerRow, playerCol] == 'F')
+                    {
+                        Console.WriteLine("Player won!");
+                        hasWin = true;
+                    }
+                }
+                else if (move == "left")
+                {
+                    bool isInside = CheckIfPlayerIsInField(matrixInput, x, y - 1);
+
+                    playerCol = isInside == true ? playerCol - 1 : matrixInput.Length - 1;
+
+                    if (matrixInput[playerRow, playerCol] == 'B')
+                    {
+                        MovePlayer(matrix, playerRow, playerCol, "left");
+                    }
+                    else if (matrixInput[playerRow, playerCol] == 'T')
+                    {
+                        MovePlayer(matrix, playerRow, playerCol, "right");
+                    }
+                    else if (matrixInput[playerRow, playerCol] == 'F')
+                    {
+                        Console.WriteLine("Player won!");
+                        hasWin = true;
+                    }
+                }
+                else if (move == "right")
+                {
+                    bool isInside = CheckIfPlayerIsInField(matrixInput, x, y + 1);
+
+                    playerCol = isInside == true ? playerCol + 1 : 0;
+
+                    if (matrixInput[playerRow, playerCol] == 'B')
+                    {
+                        MovePlayer(matrix, playerRow, playerCol, "right");
+                    }
+                    else if (matrixInput[playerRow, playerCol] == 'T')
+                    {
+                        MovePlayer(matrix, playerRow, playerCol, "left");
+                    }
+                    else if (matrixInput[playerRow, playerCol] == 'F')
+                    {
+                        Console.WriteLine("Player won!");
+                        hasWin = true;
                     }
                 }
             }
 
-            for (int i = 0; i < commandsCount; i++)
-            {
-                string movement = Console.ReadLine();
 
-                matrix[playerRow, playerColumn] = '-';
+            matrix[playerRow, playerCol] = 'f';
 
-                int lastRow = playerRow;
-                int lastColumn = playerColumn;
-
-                playerRow = MoveRow(playerRow, movement);
-                playerColumn = MoveColumn(playerColumn, movement);
-
-                if (!IsPositionValid(playerRow, playerColumn, matrix.GetLength(0), matrix.GetLength(1)))
-                {
-                    matrix[lastRow, lastColumn] = '-';
-                    playerRow = MoveToTheBottomOrTop(playerRow, matrix.GetLength(0), movement);
-                    playerColumn = MoveToTheLeftOrRightEnd(playerColumn, matrix.GetLength(1), movement);
-                }
-
-                if (matrix[playerRow, playerColumn] == 'B')
-                {
-                    playerRow = MoveRow(playerRow, movement);
-                    playerColumn = MoveColumn(playerColumn, movement);
-                }
-                else if (matrix[playerRow, playerColumn] == 'T')
-                {
-                    movement = ReverseDirection(movement);
-                    playerRow = MoveRow(playerRow, movement);
-                    playerColumn = MoveColumn(playerColumn, movement);
-                }
-                else if (matrix[playerRow, playerColumn] == 'F')
-                {
-                    matrix[playerRow, playerColumn] = 'f';
-                    Console.WriteLine("Player won!");
-                    hasWon = true;
-                    break;
-                }
-
-                if (!IsPositionValid(playerRow, playerColumn, matrix.GetLength(0), matrix.GetLength(1)))
-                {
-                    matrix[lastRow, lastColumn] = '-';
-                    playerRow = MoveToTheBottomOrTop(playerRow, matrix.GetLength(0), movement);
-                    playerColumn = MoveToTheLeftOrRightEnd(playerColumn, matrix.GetLength(1), movement);
-                }
-
-                matrix[playerRow, playerColumn] = 'f';
-            }
-            if (!hasWon)
+            if (hasWin == false)
             {
                 Console.WriteLine("Player lost!");
             }
+
             PrintMatrix(matrix);
         }
 
-        private static string ReverseDirection(string movement)
+        private static bool CheckIfPlayerIsInField(char[,] matrix, int x, int y)
         {
-            if (movement == "left")
-            {
-                movement = "right";
-            }
-            else if (movement == "right")
-            {
-                movement = "left";
-            }
-            else if (movement == "up")
-            {
-                movement = "down";
-            }
-            else if (movement == "down")
-            {
-                movement = "up";
-            }
-
-            return movement;
+            return x >= 0 && y >= 0 && x < matrix.GetLength(0) && y < matrix.GetLength(1);
         }
 
         private static void PrintMatrix(char[,] matrix)
@@ -118,73 +154,13 @@ namespace _02._Re_Volt
             }
         }
 
-        public static int MoveRow(int row, string movement)
+        private static void GetPlayerCoordinates(ref int playerRow, ref int playerCol, char[,] matrix, int row, int column)
         {
-            if (movement == "up")
+            if (matrix[row, column] == 'f')
             {
-                return row - 1;
+                playerRow = row;
+                playerCol = column;
             }
-            if (movement == "down")
-            {
-                return row + 1;
-            }
-
-            return row;
-        }
-
-        public static int MoveColumn(int column, string movement)
-        {
-            if (movement == "left")
-            {
-                return column - 1;
-            }
-            if (movement == "right")
-            {
-                return column + 1;
-            }
-
-            return column;
-        }
-
-        public static bool IsPositionValid(int row, int column, int rows, int columns)
-        {
-            if (row < 0 || row >= rows)
-            {
-                return false;
-            }
-            if (column < 0 || column >= columns)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        public static int MoveToTheBottomOrTop(int row, int rows, string movement)
-        {
-            if (movement == "up")
-            {
-                return row + rows;
-            }
-            if (movement == "down")
-            {
-                return row - rows;
-            }
-
-            return row;
-        }
-        public static int MoveToTheLeftOrRightEnd(int column, int columns, string movement)
-        {
-            if (movement == "left")
-            {
-                return column + columns;
-            }
-            if (movement == "right")
-            {
-                return column - columns;
-            }
-
-            return column;
         }
     }
 }

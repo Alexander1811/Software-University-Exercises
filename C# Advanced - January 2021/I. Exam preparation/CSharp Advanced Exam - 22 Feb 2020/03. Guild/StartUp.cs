@@ -52,7 +52,6 @@ namespace Guild
             //Player Marlin: Mage
             //Rank: Trial
             //Description: n/a
-
         }
     }
 }

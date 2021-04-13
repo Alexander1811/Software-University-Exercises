@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace _07._Knight_Game
 {
