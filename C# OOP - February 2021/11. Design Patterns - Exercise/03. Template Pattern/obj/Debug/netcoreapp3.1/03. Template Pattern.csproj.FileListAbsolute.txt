@@ -1,0 +1,13 @@
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\bin\Debug\netcoreapp3.1\03. Template Pattern.exe
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\bin\Debug\netcoreapp3.1\03. Template Pattern.deps.json
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\bin\Debug\netcoreapp3.1\03. Template Pattern.runtimeconfig.json
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\bin\Debug\netcoreapp3.1\03. Template Pattern.runtimeconfig.dev.json
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\bin\Debug\netcoreapp3.1\03. Template Pattern.dll
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\bin\Debug\netcoreapp3.1\03. Template Pattern.pdb
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\obj\Debug\netcoreapp3.1\03. Template Pattern.csprojAssemblyReference.cache
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\obj\Debug\netcoreapp3.1\03. Template Pattern.csproj.CoreCompileInputs.cache
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\obj\Debug\netcoreapp3.1\03. Template Pattern.AssemblyInfoInputs.cache
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\obj\Debug\netcoreapp3.1\03. Template Pattern.AssemblyInfo.cs
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\obj\Debug\netcoreapp3.1\03. Template Pattern.dll
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\obj\Debug\netcoreapp3.1\03. Template Pattern.pdb
+C:\Users\1\source\repos\Design Patterns - Exercise\03. Template Pattern\obj\Debug\netcoreapp3.1\03. Template Pattern.genruntimeconfig.cache
