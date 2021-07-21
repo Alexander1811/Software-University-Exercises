@@ -202,9 +202,7 @@ async function logout() {
         method: "Get"
     });
 
-    localStorage.removeItem("token");
-    localStorage.removeItem("userId");
-    localStorage.removeItem("email");
+    localStorage.clear();
 
     checkIfUserIsLogged();
 
