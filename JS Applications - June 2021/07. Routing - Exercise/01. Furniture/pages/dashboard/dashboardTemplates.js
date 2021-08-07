@@ -14,7 +14,7 @@ export let furnitureTemplate = (furniture) => html`
             </div>
         </div>
     </div>
-</div>`
+</div>`;
 
 export let dashboardTemplate = (allFurniture) => html`
 <div class="row space-top">
@@ -25,4 +25,4 @@ export let dashboardTemplate = (allFurniture) => html`
 </div>
 <div class="row space-top">
     ${allFurniture.map(furniture => furnitureTemplate(furniture))}
-</div>`
+</div>`;

@@ -1,0 +1,15 @@
+{
+  "name": "07-unit-testing-and-error-handling-exercise",
+  "version": "1.0.0",
+  "description": "07. Unit Testing and Error Handling - Exercise",
+  "main": "index.html",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "8.3.2",
+    "chai": "4.3.4"
+  }
+}

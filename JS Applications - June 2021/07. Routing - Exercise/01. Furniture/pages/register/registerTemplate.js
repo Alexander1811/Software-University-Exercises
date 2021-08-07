@@ -25,4 +25,4 @@ export let registerTemplate = (form) => html`
             <input type="submit" class="btn btn-primary" value="Register" />
         </div>
     </div>
-</form>`
+</form>`;

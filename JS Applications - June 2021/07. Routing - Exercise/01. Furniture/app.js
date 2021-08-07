@@ -1,7 +1,8 @@
 import page from "./../node_modules/page/page.mjs";
 import renderingMiddleware from "./rendering/renderingMiddleware.js";
-import nav from "./nav/nav.js";
 import authService from "./services/authService.js";
+
+import nav from "./nav/nav.js";
 import dashboardPage from "./pages/dashboard/dashboardPage.js";
 import loginPage from "./pages/login/loginPage.js";
 import registerPage from "./pages/register/registerPage.js";

@@ -14,7 +14,7 @@ export let myFurnitureTemplate = (furniture) => html`
             </div>
         </div>
     </div>
-</div>`
+</div>`;
 
 export let allMyFurniture = (allFurniture) => html`<div class="row space-top">
     <div class="col-md-12">
@@ -24,4 +24,4 @@ export let allMyFurniture = (allFurniture) => html`<div class="row space-top">
 </div>
 <div class="row space-top">
     ${allFurniture.map(furniture => myFurnitureTemplate(furniture))}
-</div>`
+</div>`;

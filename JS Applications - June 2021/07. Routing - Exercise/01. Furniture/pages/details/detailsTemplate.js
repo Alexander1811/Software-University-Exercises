@@ -28,4 +28,4 @@ export let detailsTemplate = (furniture, deleteHandler, isOwner) => html`<div cl
         </div>`
         : ""}
     </div>
-</div>`
+</div>`;

@@ -49,4 +49,4 @@ export let editTemplate = (form) => html`
             <input type="submit" class="btn btn-primary" value="Edit" />
         </div>
     </div>
-</form>`
+</form>`;

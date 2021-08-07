@@ -21,4 +21,4 @@ export let loginTemplate = (form) => html`
             <input type="submit" class="btn btn-primary" value="Login" />
         </div>
     </div>
-</form>`
+</form>`;

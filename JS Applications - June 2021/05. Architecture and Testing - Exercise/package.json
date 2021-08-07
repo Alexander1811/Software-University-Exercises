@@ -1,0 +1,16 @@
+{
+    "name": "05-architecture-and-testing-exercise",
+    "version": "1.0.0",
+    "description": "05. Architecture and Testing - Exercise",
+    "main": "index.html",
+    "scripts": {
+        "test": "mocha tests"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "playwright-chromium": "1.9.2",
+        "mocha": "8.3.2",
+        "chai": "4.3.4"
+    }
+}

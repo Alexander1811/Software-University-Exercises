@@ -1,5 +1,5 @@
 import { html } from "./../../node_modules/lit-html/lit-html.js";
-import { ifDefined } from "./../../node_modules/lit-html/directives/if-defined.js"
+import { ifDefined } from "./../../node_modules/lit-html/directives/if-defined.js";
 
 export let navTemplate = (navInfo) => html`
 <h1><a href="/">Furniture Store</a></h1>
@@ -17,4 +17,4 @@ export let navTemplate = (navInfo) => html`
             <a id="loginLink" href="/login" class=${ifDefined(navInfo.currentPage.startsWith("/login") ? "active" : undefined)}>Login</a>
             <a id="registerLink" href="/register" class=${ifDefined(navInfo.currentPage.startsWith("/register") ? "active" : undefined)}>Register</a>
         </div>`}    
-</nav>`
+</nav>`;

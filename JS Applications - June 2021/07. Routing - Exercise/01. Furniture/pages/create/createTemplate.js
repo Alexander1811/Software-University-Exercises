@@ -48,4 +48,4 @@ export let createTemplate = (form) => html`<div class="row space-top">
             <input type="submit" class="btn btn-primary" value="Create" />
         </div>
     </div>
-</form>`
+</form>`;
