@@ -27,7 +27,7 @@ async function submitHandler(e) {
     }
 
     if (Object.values(user).some(field => field.trim() == "")) {
-        return ("All fields are required!");
+        return alert("All fields are required!");
     }
 
     let loginResult = await _authService.login(user);
