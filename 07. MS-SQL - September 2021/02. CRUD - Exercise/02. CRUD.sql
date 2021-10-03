@@ -84,7 +84,7 @@ SELECT [FirstName], [LastName], [Salary] FROM [dbo].[Employees]
 
 --17. Create View Employees with Job Titles
 CREATE VIEW [v_EmployeeNameJobTitle] AS
-SELECT CONCAT([FirstName], ' ', ISNULL([MiddleName], ' '), ' ', [LastName]) AS [Full Name], [JobTitle] AS [Job Title] FROM [dbo].[Employees]
+SELECT CONCAT([FirstName], ' ', ISNULL([MiddleName], NULL), ' ', [LastName]) AS [Full Name], [JobTitle] AS [Job Title] FROM [dbo].[Employees]
 
 --18. Distinct Job Titles
 USE [SoftUni]
