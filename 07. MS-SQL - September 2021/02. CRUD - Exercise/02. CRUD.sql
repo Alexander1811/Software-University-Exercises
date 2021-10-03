@@ -47,7 +47,6 @@ USE [SoftUni]
 SELECT CONCAT([FirstName], ' ', [MiddleName], ' ', [LastName]) AS [Full Name] FROM [dbo].[Employees]
 WHERE [Salary] = 12500 OR [Salary] = 14000 OR [Salary] = 23600 OR [Salary] = 25000
  
-
 --11. Find All Employees Without Manager
 USE [SoftUni]
 
@@ -57,8 +56,8 @@ WHERE [ManagerID] IS NULL
 --12. Find All Employees with Salary More Than 50000
 USE [SoftUni]
 
-SELECT [FirstName], [LastName] FROM [dbo].[Employees]
-WHERE [Salary] >= 50000 
+SELECT [FirstName], [LastName], [Salary] FROM [dbo].[Employees]
+WHERE [Salary] > 50000 
 ORDER BY [Salary] DESC
 
 --13. Find 5 Best Paid Employees.
@@ -111,7 +110,7 @@ UPDATE [dbo].[Employees]
 SET [Salary] *= 1.12
 WHERE [DepartmentID] IN (1, 2, 4, 11)
 
-SELECT [Salary] FROM [Employees]
+SELECT [Salary] FROM [dbo].[Employees]
 
 UPDATE [dbo].[Employees]
 SET [Salary] /= 1.12
@@ -137,7 +136,7 @@ SELECT [CountryName], [CountryCode], CASE
 	WHEN [CurrencyCode] = 'EUR' THEN 'Euro'
 	ELSE 'Not Euro'
 END AS [Currency]
-FROM [Countries]
+FROM [dbo].[Countries]
 ORDER BY [CountryName]
 
 --25. All Diablo Characters
