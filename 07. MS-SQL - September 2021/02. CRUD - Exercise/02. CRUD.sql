@@ -79,10 +79,14 @@ SELECT * FROM [dbo].[Employees]
 ORDER BY [Salary] DESC, [FirstName], [LastName] DESC, [MiddleName]
 
 --16. Create View Employees with Salaries
+USE [SoftUni]
+
 CREATE VIEW [v_EmployeesSalaries] AS
 SELECT [FirstName], [LastName], [Salary] FROM [dbo].[Employees]
 
 --17. Create View Employees with Job Titles
+USE [SoftUni]
+
 CREATE VIEW [v_EmployeeNameJobTitle] AS
 SELECT CONCAT([FirstName], ' ', ISNULL([MiddleName], NULL), ' ', [LastName]) AS [Full Name], [JobTitle] AS [Job Title] FROM [dbo].[Employees]
 
