@@ -1,7 +1,7 @@
 --01. Create Table Logs
 USE [Bank]
 
-CREATE TABLE Logs
+CREATE TABLE [Logs]
 (
 	[LogId] INT PRIMARY KEY IDENTITY NOT NULL,
 	[AccountId] INT REFERENCES [dbo].[Accounts](Id) NOT NULL,
@@ -62,9 +62,9 @@ CREATE OR ALTER PROC [usp_DepositMoney] (@AccountId INT, @MoneyAmount DECIMAL(12
 AS
 BEGIN TRANSACTION
 	IF (@MoneyAmount < 0)
-	THROW 50001, 'Can`t make transaction with negative number!', 1
+		THROW 50001, 'Can`t make transaction with negative number!', 1
 	IF @AccountId = 0
-	THROW 50002, 'There is no customer with that id!', 1
+		THROW 50002, 'There is no customer with that id!', 1
 	
 	UPDATE [dbo].[Accounts] 
 	SET [Balance] += @MoneyAmount
@@ -83,12 +83,13 @@ USE [Bank]
 GO
 
 CREATE OR ALTER PROC [usp_WithdrawMoney] (@AccountId INT, @MoneyAmount DECIMAL(12,4))
-AS
-	BEGIN TRANSACTION
+AS 
+BEGIN TRANSACTION
 	IF (@MoneyAmount < 0)
-	THROW 50001, 'Can`t make transaction with negative number!', 1
+		THROW 50001, 'Can`t make transaction with negative number!', 1
 	IF @AccountId = 0
-	THROW 50002, 'There is no customer with that id!', 1
+		THROW 50002, 'There is no customer with that id!', 1
+
 	UPDATE [Accounts] 
 	SET [Balance] -= @MoneyAmount
 	WHERE [Id] = @AccountId
