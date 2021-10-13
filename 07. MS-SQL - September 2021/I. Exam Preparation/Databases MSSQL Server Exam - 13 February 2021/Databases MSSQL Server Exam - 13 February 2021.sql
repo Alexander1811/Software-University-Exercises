@@ -54,7 +54,7 @@ CREATE TABLE [Files]
 --02. Insert
 USE [Bitbucket]
 
-INSERT INTO [dbo].[Files] ([Name], [Size], [ParentId], [CommitId]) VAlUES
+INSERT INTO [dbo].[Files]([Name], [Size], [ParentId], [CommitId]) VAlUES
 	('Trade.idk', 2598.0, 1, 1),
 	('menu.net', 9238.31, 2, 2),
 	('Administrate.soshy', 1246.93, 3, 3),
@@ -63,7 +63,7 @@ INSERT INTO [dbo].[Files] ([Name], [Size], [ParentId], [CommitId]) VAlUES
 	('Controller.json', 14034.87, 3, 6),
 	('Operate.xix', 7662.92, 7, 7)
 
-INSERT INTO [dbo].[Issues] ([Title], [IssueStatus], [RepositoryId], [AssigneeId]) VALUES
+INSERT INTO [dbo].[Issues]([Title], [IssueStatus], [RepositoryId], [AssigneeId]) VALUES
 	('Critical Problem with HomeController.cs file', 'open', 1, 4),
 	('Typo fix in Judge.html', 'open', 4, 3),
 	('Implement documentation for UsersService.cs', 'closed', 8, 2),
