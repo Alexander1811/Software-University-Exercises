@@ -28,7 +28,7 @@ CREATE TABLE [Issues]
 (
 	[Id] INT PRIMARY KEY IDENTITY,
 	[Title] VARCHAR(255) NOT NULL,
-	[IssueStatus] VARCHAR(6) NOT NULL,
+	[IssueStatus] CHAR(6) NOT NULL,
 	[RepositoryId] INT FOREIGN KEY REFERENCES [dbo].[Repositories]([Id]) NOT NULL,
 	[AssigneeId] INT FOREIGN KEY REFERENCES [dbo].[Users]([Id]) NOT NULL
 )
