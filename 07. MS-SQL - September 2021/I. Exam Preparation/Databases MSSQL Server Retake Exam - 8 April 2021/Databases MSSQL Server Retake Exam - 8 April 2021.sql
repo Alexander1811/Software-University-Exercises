@@ -184,5 +184,4 @@ END
 GO
 
 EXEC [dbo].[usp_AssignEmployeeToReport] 30, 1
-GO
 EXEC [dbo].[usp_AssignEmployeeToReport] 17, 2
