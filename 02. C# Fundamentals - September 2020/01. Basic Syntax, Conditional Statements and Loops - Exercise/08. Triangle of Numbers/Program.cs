@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _08._Triangle_of_Numbers
+namespace P08_TriangleOfNumbers
 {
     class Program
     {

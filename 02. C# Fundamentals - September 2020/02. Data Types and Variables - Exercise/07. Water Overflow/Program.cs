@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _07._Water_Overflow
+namespace P07_WaterOverflow
 {
     class Program
     {

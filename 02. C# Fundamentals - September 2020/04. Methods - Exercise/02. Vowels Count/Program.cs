@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _02._Vowels_Count
+namespace P02_VowelsCount
 {
     class Program
     {
@@ -19,17 +19,18 @@ namespace _02._Vowels_Count
                     counter++;
                 }
             }
+
             Console.WriteLine(counter);
         }
 
         static bool isVowel(char symbol)
         {
             return symbol == 'a' ||
-                    symbol == 'o' ||
-                    symbol == 'u' ||
-                    symbol == 'e' ||
-                    symbol == 'i' ||
-                    symbol == 'y';
+                   symbol == 'o' ||
+                   symbol == 'u' ||
+                   symbol == 'e' ||
+                   symbol == 'i' ||
+                   symbol == 'y';
         }
     }
 }

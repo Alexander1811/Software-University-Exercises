@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_05._Login</RootNamespace>
+    <RootNamespace>P05_Login</RootNamespace>
+    <AssemblyName>P05_Login</AssemblyName>
   </PropertyGroup>
 
 </Project>

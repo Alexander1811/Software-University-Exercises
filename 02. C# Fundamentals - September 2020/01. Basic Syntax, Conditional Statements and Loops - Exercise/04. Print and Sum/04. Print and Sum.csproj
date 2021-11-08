@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_04._Print_and_Sum</RootNamespace>
+    <RootNamespace>P04_PrintAndSum</RootNamespace>
+    <AssemblyName>P04_PrintAndSum</AssemblyName>
   </PropertyGroup>
 
 </Project>

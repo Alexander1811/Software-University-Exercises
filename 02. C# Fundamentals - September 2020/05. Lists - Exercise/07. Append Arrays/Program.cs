@@ -15,18 +15,19 @@ namespace _07._Append_Arrays
                 .ToList();
             List<int> numbers = new List<int>();
 
+            AggregateNumbersIntoArray(listOfArrays, numbers);
 
+            Console.WriteLine(string.Join(' ', numbers));
+        }
+
+        private static void AggregateNumbersIntoArray(List<string> listOfArrays, List<int> numbers)
+        {
             foreach (string arrayOfNumbers in listOfArrays)
             {
                 numbers.AddRange(arrayOfNumbers
                     .Split(" ", StringSplitOptions.RemoveEmptyEntries)
                     .Select(e => int.Parse(e))
-                    .ToArray());                
-            }
-
-            foreach ( int number in numbers)
-            {
-                Console.Write(number + " ");
+                    .ToArray());
             }
         }
     }

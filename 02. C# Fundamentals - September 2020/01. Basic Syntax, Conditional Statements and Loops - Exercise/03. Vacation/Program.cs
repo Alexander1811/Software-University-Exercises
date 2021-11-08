@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _03._Vacation
+namespace P03_Vacation
 {
     class Program
     {

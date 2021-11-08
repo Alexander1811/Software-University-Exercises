@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_03._Zig_Zag_Arrays</RootNamespace>
+    <RootNamespace>P03_ZigZagArrays</RootNamespace>
+    <AssemblyName>P03_ZigZagArrays</AssemblyName>
   </PropertyGroup>
 
 </Project>

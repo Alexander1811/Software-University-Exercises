@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _07._Vending_Machine
+namespace P07_VendingMachine
 {
     class Program
     {

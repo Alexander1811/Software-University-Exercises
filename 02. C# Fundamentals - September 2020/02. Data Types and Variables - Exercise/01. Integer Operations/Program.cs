@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01._Integer_Operations
+namespace P01_IntegerOperations
 {
     class Program
     {
@@ -12,6 +12,7 @@ namespace _01._Integer_Operations
             int fourth = int.Parse(Console.ReadLine());
 
             int result = (first + second) / third * fourth;
+
             Console.WriteLine(result);
         }
     }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _06._Equal_Sum
+namespace P06_EqualSum
 {
     class Program
     {

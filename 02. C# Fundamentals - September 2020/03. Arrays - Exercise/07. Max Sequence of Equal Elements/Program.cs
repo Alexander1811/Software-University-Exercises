@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Linq;
 
-namespace _07._Max_Sequence_of_Equal_Elements
+namespace P07_MaxSequenceOfEqualElements
 {
     class Program
     {
         static void Main(string[] args)
         {
             int[] array = Console
-                            .ReadLine()
-                            .Split()
-                            .Select(e => int.Parse(e))
-                            .ToArray();
+                .ReadLine()
+                .Split()
+                .Select(e => int.Parse(e))
+                .ToArray();
 
             int longestSequenceLength = 0;
             int longestSequenceIndex = 0;

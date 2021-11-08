@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _01._Train
+namespace P01_Train
 {
     class Program
     {

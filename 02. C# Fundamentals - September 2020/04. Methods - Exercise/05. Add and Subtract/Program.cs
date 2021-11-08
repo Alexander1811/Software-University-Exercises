@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _05._Add_and_Subtract
+namespace P05_AddAndSubtract
 {
     class Program
     {
@@ -18,6 +18,7 @@ namespace _05._Add_and_Subtract
             int result = a + b;
             return result;
         }
+
         static int Subtract(int sum, int c)
         {
             int result = sum - c;

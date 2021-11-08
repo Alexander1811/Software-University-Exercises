@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _02._Divison
+namespace P02_Divison
 {
     class Program
     {

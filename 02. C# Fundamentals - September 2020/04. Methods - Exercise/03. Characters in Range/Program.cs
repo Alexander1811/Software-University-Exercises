@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _03._Characters_in_Range
+namespace P03_CharactersInRange
 {
     class Program
     {
@@ -21,12 +21,13 @@ namespace _03._Characters_in_Range
 
             CharachtersInRange(ASCIIStart, ASCIIEnd);
 
-            static void CharachtersInRange(char a, char b)
+        }
+
+        static void CharachtersInRange(char a, char b)
+        {
+            for (int i = (int)a + 1; i < (int)b; i++)
             {
-                for (int i = (int) a + 1; i < (int) b; i++)
-                {
-                    Console.Write((char)i + " ");
-                }
+                Console.Write((char)i + " ");
             }
         }
     }

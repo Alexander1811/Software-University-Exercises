@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _01._Train
+namespace P01_Train
 {
     class Program
     {
@@ -15,6 +15,7 @@ namespace _01._Train
                 train[i] = int.Parse(Console.ReadLine());
                 
             }
+
             Console.WriteLine(string.Join(" ", train));
             Console.WriteLine(train.Sum());
         }

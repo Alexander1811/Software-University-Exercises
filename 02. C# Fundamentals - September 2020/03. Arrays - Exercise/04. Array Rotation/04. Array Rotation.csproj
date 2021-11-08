@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_04._Array_Rotation</RootNamespace>
+    <RootNamespace>P04_ArrayRotation</RootNamespace>
+    <AssemblyName>P04_ArrayRotation</AssemblyName>
   </PropertyGroup>
 
 </Project>

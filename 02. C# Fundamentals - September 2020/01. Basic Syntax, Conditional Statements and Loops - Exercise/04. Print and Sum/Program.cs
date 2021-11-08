@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _04._Print_and_Sum
+namespace P04_PrintAndSum
 {
     class Program
     {

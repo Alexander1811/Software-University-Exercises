@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_02._Vowels_Count</RootNamespace>
+    <RootNamespace>P02_VowelsCount</RootNamespace>
+    <AssemblyName>P02_VowelsCount</AssemblyName>
   </PropertyGroup>
 
 </Project>

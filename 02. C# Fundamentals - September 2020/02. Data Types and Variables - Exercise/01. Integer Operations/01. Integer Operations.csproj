@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_01._Integer_Operations</RootNamespace>
+    <RootNamespace>P01_IntegerOperations</RootNamespace>
+    <AssemblyName>P01_IntegerOperations</AssemblyName>
   </PropertyGroup>
 
 </Project>

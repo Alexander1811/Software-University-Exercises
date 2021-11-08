@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_11._Array_Manipulator</RootNamespace>
+    <RootNamespace>P11_ArrayManipulator</RootNamespace>
+    <AssemblyName>P11_ArrayManipulator</AssemblyName>
   </PropertyGroup>
 
 </Project>

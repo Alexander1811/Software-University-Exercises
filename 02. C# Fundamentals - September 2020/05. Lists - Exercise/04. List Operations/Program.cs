@@ -2,42 +2,41 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _04._List_Operations
+namespace P04_ListOperations
 {
     class Program
     {
         static void Main(string[] args)
         {
-            List<int> numbers = Console.
-                            ReadLine().
-                            Split(" ", StringSplitOptions.RemoveEmptyEntries).
-                            Select(e => int.Parse(e)).
-                            ToList();
+            List<int> numbers = Console
+                .ReadLine()
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(e => int.Parse(e))
+                .ToList();
 
             string command;
             while ((command = Console.ReadLine()) != "End")
             {
-                string[] commandArgs = command.
-                    Split(" ", StringSplitOptions.RemoveEmptyEntries).
-                    ToArray();
+                string[] commandArgs = command
+                    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                    .ToArray();
 
                 string action = commandArgs[0];
 
-                if (action == "Add")
+                switch (action)
                 {
-                    AddNumber(numbers, commandArgs);
-                }
-                else if (action == "Insert")
-                {
-                    InsertAtIndex(numbers, commandArgs);
-                }
-                else if (action == "Remove")
-                {
-                    RemoveAtIndex(numbers, commandArgs);
-                }
-                else if (action == "Shift")
-                {
-                    ShiftLeftOrRight(numbers, commandArgs);
+                    case "Add":
+                        AddNumber(numbers, commandArgs);
+                        break;
+                    case "Insert":
+                        InsertAtIndex(numbers, commandArgs);
+                        break;
+                    case "Remove":
+                        RemoveAtIndex(numbers, commandArgs);
+                        break;
+                    case "Shift":
+                        ShiftLeftOrRight(numbers, commandArgs);
+                        break;
                 }
             }
 

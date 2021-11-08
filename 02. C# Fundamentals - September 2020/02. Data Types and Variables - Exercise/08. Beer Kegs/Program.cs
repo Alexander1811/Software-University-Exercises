@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Runtime.InteropServices;
 
-namespace _08._Beer_Kegs
+namespace P08_BeerKegs
 {
     class Program
     {
@@ -9,7 +8,7 @@ namespace _08._Beer_Kegs
         {
             int n = int.Parse(Console.ReadLine());
             float previousVolume = 0;
-            float currentVolume = 0;
+            float currentVolume;
             string biggestKeg = "";
 
             for (int i = 0; i < n; i++)

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _02._Common_Elements
+namespace P02_CommonElements
 {
     class Program
     {
@@ -20,6 +20,7 @@ namespace _02._Common_Elements
                     }
                 }
             }
+
             Console.WriteLine(result);
         }
     }

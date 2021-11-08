@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01._Ages
+namespace P01_Ages
 {
     class Program
     {

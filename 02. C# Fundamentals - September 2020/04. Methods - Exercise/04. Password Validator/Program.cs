@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _04._Password_Validator
+namespace P04_PasswordValidator
 {
     class Program
     {
@@ -25,8 +25,6 @@ namespace _04._Password_Validator
             {
                 Console.WriteLine("Password is valid");
             }
-
-
         }
 
         static bool PasswordLength(string password)

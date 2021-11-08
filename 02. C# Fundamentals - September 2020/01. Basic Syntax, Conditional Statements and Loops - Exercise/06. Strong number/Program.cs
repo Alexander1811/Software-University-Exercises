@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _06._Strong_number
+namespace P06_StrongNumber
 {
     class Program
     {

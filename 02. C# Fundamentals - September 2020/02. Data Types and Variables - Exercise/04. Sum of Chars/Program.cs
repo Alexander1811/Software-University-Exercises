@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _04._Sum_of_Chars
+namespace P04_SumOfChars
 {
     class Program
     {

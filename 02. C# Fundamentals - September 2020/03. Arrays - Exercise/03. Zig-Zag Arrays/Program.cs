@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _03._Zig_Zag_Arrays
+namespace P03_ZigZagArrays
 {
     class Program
     {
@@ -12,8 +12,8 @@ namespace _03._Zig_Zag_Arrays
 
             for (int i = 0; i < n; i++)
             {
-
                 string[] current = Console.ReadLine().Split();
+                
                 if (i % 2 != 0)
                 {
                     array1[i] = current[0];
@@ -26,6 +26,7 @@ namespace _03._Zig_Zag_Arrays
                 }
                 
             }
+
             Console.WriteLine(string.Join(" ", array2));
             Console.WriteLine(string.Join(" ", array1));
         }

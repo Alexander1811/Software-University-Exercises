@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _05._Print_Part_Of_ASCII_Table
+namespace P05_PrintPartOfASCIITable
 {
     class Program
     {

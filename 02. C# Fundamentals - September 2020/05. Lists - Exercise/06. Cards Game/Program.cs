@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _06._Cards_Game
+namespace P06_CardsGame
 {
     class Program
     {
         static void Main(string[] args)
         {
-            List<int> firstPlayer = Console.
-                            ReadLine().
-                            Split(" ", StringSplitOptions.RemoveEmptyEntries).
-                            Select(e => int.Parse(e)).
-                            ToList();
-            List<int> secondPlayer = Console.
-                            ReadLine().
-                            Split(" ", StringSplitOptions.RemoveEmptyEntries).
-                            Select(e => int.Parse(e)).
-                            ToList();
+            List<int> firstPlayer = Console
+                .ReadLine()
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(e => int.Parse(e))
+                .ToList();
+            List<int> secondPlayer = Console
+                .ReadLine()
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(e => int.Parse(e))
+                .ToList();
 
             string winner = "";
             int sum = 0;

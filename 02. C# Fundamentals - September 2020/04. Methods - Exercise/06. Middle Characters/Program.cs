@@ -1,12 +1,13 @@
 ﻿using System;
 
-namespace _06._Middle_Characters
+namespace P06_MiddleCharacters
 {
     class Program
     {
         static void Main(string[] args)
         {
             string text = Console.ReadLine();
+
             MiddleCharacters(text);
         }
 
@@ -19,7 +20,6 @@ namespace _06._Middle_Characters
             else
             {
                 Console.WriteLine("" + word[word.Length / 2 - 1] + word[word.Length / 2]);
-
             }
         }
     }

@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _02._Change_List
+namespace P02_ChangeList
 {
     class Program
     {
         static void Main(string[] args)
         {
-            List<int> numbers = Console.
-                            ReadLine().
-                            Split().
-                            Select(e => int.Parse(e)).
-                            ToList();
+            List<int> numbers = Console
+                .ReadLine()
+                .Split()
+                .Select(e => int.Parse(e))
+                .ToList();
 
             string command;
             while ((command = Console.ReadLine()) != "end")

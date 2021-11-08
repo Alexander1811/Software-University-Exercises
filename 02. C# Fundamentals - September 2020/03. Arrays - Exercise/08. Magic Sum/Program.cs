@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Linq;
 
-namespace _08._Magic_Sum
+namespace P08_MagicSum
 {
     class Program
     {
         static void Main(string[] args)
         {
             int[] array = Console
-                            .ReadLine()
-                            .Split()
-                            .Select(e => int.Parse(e))
-                            .ToArray();
+                .ReadLine()
+                .Split()
+                .Select(e => int.Parse(e))
+                .ToArray();
 
             int num = int.Parse(Console.ReadLine());
             int currentSum = 0;

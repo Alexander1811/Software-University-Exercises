@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _09._Spice_Must_Flow
+namespace P09_SpiceMustFlow
 {
     class Program
     {
@@ -8,7 +8,7 @@ namespace _09._Spice_Must_Flow
         {
             int yield = int.Parse(Console.ReadLine());
             int totalSpice = 0;
-            int days = 0;
+            int days;
 
             for (days = 0; yield >= 100; yield -= 10)
             {
@@ -32,6 +32,7 @@ namespace _09._Spice_Must_Flow
             {
                 totalSpice = 0;
             }
+
             Console.WriteLine(days);
             Console.WriteLine(totalSpice);
         }

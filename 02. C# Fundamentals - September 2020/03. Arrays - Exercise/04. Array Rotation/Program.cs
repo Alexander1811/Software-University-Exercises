@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _04._Array_Rotation
+namespace P04_ArrayRotation
 {
     class Program
     {
@@ -17,6 +17,7 @@ namespace _04._Array_Rotation
                 {
                     array[i] = array[i + 1];
                 }
+
                 array[array.Length - 1] = temp;
             }
 

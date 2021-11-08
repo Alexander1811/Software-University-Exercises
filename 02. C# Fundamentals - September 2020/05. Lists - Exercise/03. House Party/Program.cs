@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _03._House_Party
+namespace P03_HouseParty
 {
     class Program
     {
@@ -14,18 +14,18 @@ namespace _03._House_Party
 
             for (int i = 0; i < num; i++)
             {
-                string[] input = Console.
-                    ReadLine().
-                    Split(" ", StringSplitOptions.RemoveEmptyEntries).
-                    ToArray();
+                string[] input = Console
+                    .ReadLine()
+                    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                    .ToArray();
 
                 string name = input[0];
 
-                if (input.Length == 3) //Going
+                if (input.Length == 3)
                 {
                     AddToList(list, name);
                 }
-                else if (input.Length == 4) //Not going
+                else if (input.Length == 4)
                 {
                     RemoveFromList(list, name);
                 }                

@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_06._Triples_of_Latin_Letters</RootNamespace>
+    <RootNamespace>P06_TriplesOfLatinLetters</RootNamespace>
+    <AssemblyName>P06_TriplesOfLatinLetters</AssemblyName>
   </PropertyGroup>
 
 </Project>

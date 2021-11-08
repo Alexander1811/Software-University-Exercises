@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_01._Train</RootNamespace>
+    <RootNamespace>P01_Train</RootNamespace>
+    <AssemblyName>P01_Train</AssemblyName>
   </PropertyGroup>
 
 </Project>

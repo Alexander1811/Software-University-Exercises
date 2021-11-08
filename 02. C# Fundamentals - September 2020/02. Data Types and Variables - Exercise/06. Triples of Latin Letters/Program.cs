@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _06._Triples_of_Latin_Letters
+namespace P06_TriplesOfLatinLetters
 {
     class Program
     {
@@ -11,7 +11,6 @@ namespace _06._Triples_of_Latin_Letters
 
             for (int i = 0; i < num; i++)
             {
-
                 for (int j = 0; j < num; j++)
                 {
                     for (int k = 0; k < num; k++)

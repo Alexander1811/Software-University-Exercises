@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_03._House_Party</RootNamespace>
+    <RootNamespace>P03_HouseParty</RootNamespace>
+    <AssemblyName>P03_HouseParty</AssemblyName>
   </PropertyGroup>
 
 </Project>

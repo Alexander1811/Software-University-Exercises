@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01._Smallest_of_Three_Numbers
+namespace P01_SmallestOfThreeNumbers
 {
     class Program
     {
@@ -11,6 +11,7 @@ namespace _01._Smallest_of_Three_Numbers
             int c = int.Parse(Console.ReadLine());
 
             int smallest = FindSmallestOfThree(a, b, c);
+
             Console.WriteLine(smallest);
         }
 

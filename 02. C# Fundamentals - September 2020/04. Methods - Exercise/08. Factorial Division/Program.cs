@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _08._Factorial_Division
+namespace P08_FactorialDivision
 {
     class Program
     {
@@ -14,7 +14,6 @@ namespace _08._Factorial_Division
 
         static double FactorialDivison(double a, double b)
         {
-            double result = 0;
             double factorialA = 1;
             double factorialB = 1;
 
@@ -26,7 +25,7 @@ namespace _08._Factorial_Division
             {
                 factorialB *= i;
             }
-            return result = factorialA / factorialB;
+            return factorialA / factorialB;
         }
     }
 }

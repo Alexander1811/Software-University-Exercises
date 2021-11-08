@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _05._Top_Integers
+namespace P05_TopIntegers
 {
     class Program
     {
@@ -33,6 +33,7 @@ namespace _05._Top_Integers
                     result += currentNum + " ";
                 }
             }
+
             Console.WriteLine(result);
         }
     }
