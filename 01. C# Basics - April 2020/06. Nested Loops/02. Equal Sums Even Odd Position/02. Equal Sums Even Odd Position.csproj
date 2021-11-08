@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>P02_EqualSumsEvenOddPosition</RootNamespace>
+    <AssemblyName>P02_EqualSumsEvenOddPosition</AssemblyName>
+  </PropertyGroup>
+
+</Project>

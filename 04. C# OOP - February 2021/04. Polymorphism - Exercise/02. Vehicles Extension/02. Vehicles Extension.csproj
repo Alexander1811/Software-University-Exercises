@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_02._Vehicles_Extension</RootNamespace>
+    <RootNamespace>P02VehiclesExtension</RootNamespace>
+    <AssemblyName>P02VehiclesExtension</AssemblyName>
   </PropertyGroup>
 
 </Project>

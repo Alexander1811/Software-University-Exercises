@@ -1,4 +1,4 @@
-﻿namespace _02._Vehicles_Extension
+﻿namespace P02VehiclesExtension
 {
     public class Car : Vehicle
     {

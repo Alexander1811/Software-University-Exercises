@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using _04._Wild_Farm.Foods;
-
-namespace _04._Wild_Farm.Animals
+﻿namespace P04WildFarm.Animals
 {
+    using System;
+    using System.Collections.Generic;
+    using P04WildFarm.Foods;
+
     public abstract class Animal
     {
         protected Animal(string name, double weight, HashSet<string> allowedFoods, double weightModifier)

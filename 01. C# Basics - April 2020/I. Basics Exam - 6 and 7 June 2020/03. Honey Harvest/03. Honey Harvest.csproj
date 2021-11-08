@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>P03_HoneyHarvest</RootNamespace>
+    <AssemblyName>P03_HoneyHarvest</AssemblyName>
+  </PropertyGroup>
+
+</Project>

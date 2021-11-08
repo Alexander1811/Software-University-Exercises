@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace _04._Wild_Farm.Animals.Mammals
+﻿namespace P04WildFarm.Animals.Mammals
 {
+    using System.Collections.Generic;
+
     public abstract class Mammal : Animal
     {
         protected Mammal(string name, double weight, HashSet<string> allowedFoods, double weightModifier, string livingRegion)

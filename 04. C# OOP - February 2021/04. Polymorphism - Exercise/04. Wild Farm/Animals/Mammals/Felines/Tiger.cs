@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using _04._Wild_Farm.Foods;
-
-namespace _04._Wild_Farm.Animals.Mammals
+﻿namespace P04WildFarm.Animals.Mammals
 {
+    using System.Collections.Generic;
+    using P04WildFarm.Foods;
+
     public class Tiger : Feline
     {
         private const double WeightModifier = 1.00;

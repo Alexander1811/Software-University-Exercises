@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using _04._Wild_Farm.Animals;
-using _04._Wild_Farm.Animals.Mammals;
-using _04._Wild_Farm.Animals.Birds;
-using _04._Wild_Farm.Foods;
-
-namespace _04._Wild_Farm
+﻿namespace P04WildFarm
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using P04WildFarm.Animals;
+    using P04WildFarm.Animals.Mammals;
+    using P04WildFarm.Animals.Birds;
+    using P04WildFarm.Foods;
+
     class StartUp
     {
         static void Main(string[] args)

@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace _01._Vehicles
+﻿namespace P01Vehicles
 {
+    using System;
     public abstract class Vehicle
     {
         protected Vehicle(double fuelQuantity, double fuelConsumption, double airConditionerModifier)
@@ -19,7 +18,7 @@ namespace _01._Vehicles
 
         public void Drive(double distance)
         {
-            double fuelConsumed = distance * (this.FuelConsumption+this.AirConditionerModifier);
+            double fuelConsumed = distance * (this.FuelConsumption + this.AirConditionerModifier);
             if (fuelConsumed > this.FuelQuantity)
             {
                 throw new InvalidOperationException($"{this.GetType().Name} needs refueling");

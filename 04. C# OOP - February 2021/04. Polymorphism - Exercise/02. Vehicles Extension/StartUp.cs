@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _02._Vehicles_Extension
+namespace P02VehiclesExtension
 {
     public class StartUp
     {

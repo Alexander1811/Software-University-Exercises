@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_04._Wild_Farm</RootNamespace>
+    <RootNamespace>P04WildFarm</RootNamespace>
+    <AssemblyName>P04WildFarm</AssemblyName>
   </PropertyGroup>
 
 </Project>

@@ -1,6 +1,6 @@
-﻿namespace _04._Wild_Farm.Foods
+﻿namespace P04WildFarm.Foods
 {
-    class Meat : Food
+    public class Meat : Food
     {
         public Meat(int quantity)
             : base(quantity)

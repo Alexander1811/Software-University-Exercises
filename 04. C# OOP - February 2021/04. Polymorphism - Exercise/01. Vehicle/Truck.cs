@@ -1,4 +1,4 @@
-﻿namespace _01._Vehicles
+﻿namespace P01Vehicles
 {
     public class Truck : Vehicle
     {

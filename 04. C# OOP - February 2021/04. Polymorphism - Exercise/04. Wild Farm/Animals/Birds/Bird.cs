@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace _04._Wild_Farm.Animals.Birds
+﻿namespace P04WildFarm.Animals.Birds
 {
+    using System.Collections.Generic;
+
     public abstract class Bird : Animal
     {
         protected Bird(string name, double weight, HashSet<string> allowedFoods, double weightModifier, double wingSize)

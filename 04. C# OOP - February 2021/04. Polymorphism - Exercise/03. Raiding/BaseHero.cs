@@ -1,4 +1,4 @@
-﻿namespace _03._Raiding
+﻿namespace P03Raiding
 {
     public abstract class BaseHero
     {
@@ -9,7 +9,9 @@
         }
 
         public string Name { get; private set; }
+
         public int Power { get; private set; }
+
         public abstract string CastAbility();
     }
 }

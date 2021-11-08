@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace _03._Raiding
+﻿namespace P03Raiding
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     class StartUp
     {
         static void Main(string[] args)

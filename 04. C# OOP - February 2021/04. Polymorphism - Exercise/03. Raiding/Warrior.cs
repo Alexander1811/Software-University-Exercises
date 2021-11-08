@@ -1,4 +1,4 @@
-﻿namespace _03._Raiding
+﻿namespace P03Raiding
 {
     public class Warrior : BaseHero
     {
