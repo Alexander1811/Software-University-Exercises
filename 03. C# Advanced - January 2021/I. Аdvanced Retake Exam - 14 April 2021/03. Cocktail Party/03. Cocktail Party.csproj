@@ -3,6 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>P03_CocktailParty</AssemblyName>
+    <RootNamespace>P03_CocktailParty</RootNamespace>
   </PropertyGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace CocktailParty
+﻿namespace P03_CocktailParty
 {
     using System;
 

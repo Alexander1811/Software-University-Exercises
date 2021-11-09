@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>P04_CopyBinaryFile</RootNamespace>
+    <AssemblyName>P04_CopyBinaryFile</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="copyMe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

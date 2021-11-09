@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>P06_ZipAndExtract</RootNamespace>
+    <AssemblyName>P06_ZipAndExtract</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="copyMe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

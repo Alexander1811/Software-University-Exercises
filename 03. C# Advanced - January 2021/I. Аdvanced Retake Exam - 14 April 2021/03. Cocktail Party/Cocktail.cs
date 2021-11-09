@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace CocktailParty
+namespace P03_CocktailParty
 {
     public class Cocktail
     {

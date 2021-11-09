@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _02._Super_Mario
+namespace P02_SuperMario
 {
     class Program
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CocktailParty
+namespace P03_CocktailParty
 {
     public class Ingredient
     {
@@ -19,13 +19,14 @@ namespace CocktailParty
 
         public override string ToString()
         {
+            return $"Ingredient: {this.Name}" + Environment.NewLine 
+                + $"Quantity: {this.Quantity}" + Environment.NewLine 
+                + $"Alcohol: {this.Alcohol}";
+
             //StringBuilder sb = new StringBuilder();
             //sb.AppendLine($"Ingredient: {this.Name}");
             //sb.AppendLine();
             //sb.AppendLine();
-            return $"Ingredient: {this.Name}" +
-Environment.NewLine + $"Quantity: {this.Quantity}" +
-Environment.NewLine + $"Alcohol: {this.Alcohol}";
         }
     }
 }

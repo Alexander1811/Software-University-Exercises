@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _01._Warm_Winter
+namespace P01_WarmWinter
 {
     class Program
     {

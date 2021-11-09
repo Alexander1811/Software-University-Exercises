@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>P02_SetsOfElements</RootNamespace>
+    <AssemblyName>P02_SetsOfElements</AssemblyName>
+  </PropertyGroup>
+
+</Project>

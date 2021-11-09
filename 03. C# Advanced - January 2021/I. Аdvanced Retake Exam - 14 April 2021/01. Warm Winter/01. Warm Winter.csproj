@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_01._Warm_Winter</RootNamespace>
+    <RootNamespace>P01_WarmWinter</RootNamespace>
+    <AssemblyName>P01_WarmWinter</AssemblyName>
   </PropertyGroup>
 
 </Project>
