@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Globalization;
 using System.Text;
 
-namespace _06._Vehicle_Catalogue
+namespace P06_VehicleCatalogue
 {
     class Program
     {
         static void Main(string[] args)
         {
             List<Vehicle> catalogue = new List<Vehicle>();
+
             string command;
             while ((command = Console.ReadLine()) != "End")
             {
@@ -21,6 +21,7 @@ namespace _06._Vehicle_Catalogue
                 int horsepower = int.Parse(input[3]);
 
                 Vehicle currentVehicle = new Vehicle(type, model, color, horsepower);
+
                 catalogue.Add(currentVehicle);
             }
 
@@ -57,7 +58,6 @@ namespace _06._Vehicle_Catalogue
         }
     }
 
-
     class Vehicle
     {
         public Vehicle(string type, string model, string color, int horsepower)
@@ -70,9 +70,12 @@ namespace _06._Vehicle_Catalogue
         }
 
         public string Type { get; set; }
+
         public string Model { get; set; }
+
         public string Color { get; set; }
-        public int Horsepower { get; set; }
+
+        public int Horsepower { get; set; } 
 
         public override string ToString()
         {

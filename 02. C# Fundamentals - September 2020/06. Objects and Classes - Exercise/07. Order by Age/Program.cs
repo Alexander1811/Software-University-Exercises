@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _07._Order_by_Age
+namespace P07_OrderByAge
 {
     class Program
     {
@@ -19,6 +19,7 @@ namespace _07._Order_by_Age
                 int age = int.Parse(input[2]);
 
                 Person currentPerson = new Person(name, id, age);
+
                 people.Add(currentPerson);
             }
 
@@ -30,6 +31,7 @@ namespace _07._Order_by_Age
             }
         }
     }
+
     class Person
     {
         public Person(string name, string id, int age)
@@ -41,7 +43,9 @@ namespace _07._Order_by_Age
         }
 
         public string Name { get; set; }
+
         public string ID { get; set; }
+
         public int Age { get; set; }
 
         public override string ToString()

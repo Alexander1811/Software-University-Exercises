@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_06._Vehicle_Catalogue</RootNamespace>
+    <RootNamespace>P06_VehicleCatalogue</RootNamespace>
+    <AssemblyName>P06_VehicleCatalogue</AssemblyName>
   </PropertyGroup>
 
 </Project>

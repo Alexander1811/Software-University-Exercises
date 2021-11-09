@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace _03._SoftUni_Bar_Income
+namespace P03_SoftUniBarIncome
 {
     class Program
     {
@@ -16,6 +16,7 @@ namespace _03._SoftUni_Bar_Income
 
                 Match expression = Regex.Match(input, orderPattern);
                 double currentSum = 0;
+
                 if (expression.Success)
                 {
                     string customer = expression.Groups["customer"].Value;
@@ -29,6 +30,7 @@ namespace _03._SoftUni_Bar_Income
                     Console.WriteLine($"{customer}: {product} - {currentSum:F2}");
                 }
             }
+
             Console.WriteLine($"Total income: {totalSum:F2}");
         }
     }

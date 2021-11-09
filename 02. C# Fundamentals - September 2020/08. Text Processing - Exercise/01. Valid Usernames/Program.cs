@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _01._Valid_Usernames
+namespace P01_ValidUsernames
 {
     class Program
     {

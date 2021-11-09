@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _05._SoftUni_Parking
+namespace P05_SoftUniParking
 {
     class Program
     {
@@ -14,9 +14,12 @@ namespace _05._SoftUni_Parking
 
             for (int i = 0; i < n; i++)
             {
-                string[] command = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
+                string[] command = Console.ReadLine()
+                    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                    .ToArray();
                 string action = command[0];
                 string username = command[1];
+
                 RegisterOrUnregisterUsers(usersList, command, action, username);
             }
 
@@ -29,6 +32,7 @@ namespace _05._SoftUni_Parking
             {
                 string username = keyValuePair.Key;
                 string licensePlateNumber = keyValuePair.Value;
+
                 Console.WriteLine($"{username} => {licensePlateNumber}");
             }
         }
@@ -46,6 +50,7 @@ namespace _05._SoftUni_Parking
                 else
                 {
                     usersList[username] = licensePlateNumber;
+
                     Console.WriteLine($"{username} registered {licensePlateNumber} successfully");
                 }
             }
@@ -58,6 +63,7 @@ namespace _05._SoftUni_Parking
                 else
                 {
                     usersList.Remove(username);
+
                     Console.WriteLine($"{username} unregistered successfully");
                 }
             }

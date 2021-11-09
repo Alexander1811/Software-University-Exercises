@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_03._Legendary_Farming</RootNamespace>
+    <RootNamespace>P03_LegendaryFarming</RootNamespace>
+    <AssemblyName>P03_LegendaryFarming</AssemblyName>
   </PropertyGroup>
 
 </Project>

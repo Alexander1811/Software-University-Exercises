@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace _01._Furniture
+namespace P01_Furniture
 {
     class Program
     {
@@ -24,7 +24,6 @@ namespace _01._Furniture
                     decimal price = decimal.Parse(expression.Groups["price"].Value);
                     long quantity = long.Parse(expression.Groups["quantity"].Value);
 
-
                     if (quantity != 0)
                     {
                         furniture.Add(name);
@@ -38,6 +37,7 @@ namespace _01._Furniture
             {
                 Console.WriteLine($"{string.Join(Environment.NewLine, furniture)}");
             }
+
             Console.WriteLine($"Total money spend: {totalPrice:F2}");
         }
     }

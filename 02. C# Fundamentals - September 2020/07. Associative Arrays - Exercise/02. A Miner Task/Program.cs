@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _02._A_Miner_Task
+namespace P02_AMinerTask
 {
     class Program
     {

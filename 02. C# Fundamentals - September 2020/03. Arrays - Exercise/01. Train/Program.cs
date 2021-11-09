@@ -12,8 +12,7 @@ namespace P01_Train
 
             for (int i = 0; i < n; i++)
             {
-                train[i] = int.Parse(Console.ReadLine());
-                
+                train[i] = int.Parse(Console.ReadLine());                
             }
 
             Console.WriteLine(string.Join(" ", train));

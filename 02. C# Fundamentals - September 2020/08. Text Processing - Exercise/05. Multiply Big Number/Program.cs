@@ -1,26 +1,12 @@
 ﻿using System;
-using System.Linq;
 using System.Text;
 
-namespace _05._Multiply_Big_Number
+namespace P05_MultiplyBigNumber
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //You are given two lines – the first one can be a really big number(0 to 1050).The second one will be a single digit number(0 to 9). You must display the product of these numbers.
-            //Note: do not use the BigInteger class.
-            //Examples
-            //Input                                 Output
-            //23
-            //2	                                    46
-
-            //9999
-            //9	                                    89991
-
-            //923847238931983192462832102
-            //4	                                    3695388955727932769851328408
-
             int remainder = 0;
 
             char[] number = Console.ReadLine().ToCharArray();
@@ -46,7 +32,7 @@ namespace _05._Multiply_Big_Number
                 sb.Insert(0, remainder);
             }
 
-            if (multiplier == 0) //fourth test zero answer; first, second and fifth are normal
+            if (multiplier == 0) 
             {
                 Console.WriteLine("0");
             }
@@ -56,7 +42,7 @@ namespace _05._Multiply_Big_Number
 
             }
 
-            //the third test still falling
+            //the third test still fails
         }
     }
 }

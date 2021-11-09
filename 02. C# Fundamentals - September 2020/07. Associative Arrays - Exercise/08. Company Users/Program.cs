@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _08._Company_Users
+namespace P08_CompanyUsers
 {
     class Program
     {
@@ -19,15 +19,15 @@ namespace _08._Company_Users
                 string companyName = command[0];
                 string employeeID = command[1];
 
-                if (!companyList.ContainsKey(companyName)) //register company
+                if (!companyList.ContainsKey(companyName)) 
                 {
                     employeeIDList = new List<string>();
                     employeeIDList.Add(employeeID);
                     companyList[companyName] = employeeIDList;
                 }
-                else if (companyList.ContainsKey(companyName)) //exisiting company
+                else if (companyList.ContainsKey(companyName)) 
                 {
-                    if (!companyList[companyName].Contains(employeeID)) //check if already employeed
+                    if (!companyList[companyName].Contains(employeeID)) 
                     {
                         companyList[companyName].Add(employeeID);
                     }
@@ -41,16 +41,19 @@ namespace _08._Company_Users
 
         private static Dictionary<string, List<string>> SortList(Dictionary<string, List<string>> companyList)
         {
-            return companyList.OrderBy(a => a.Key).ToDictionary(a => a.Key, b => b.Value);
-            //sort list
+            return companyList
+                .OrderBy(a => a.Key)
+                .ToDictionary(a => a.Key, b => b.Value);
         }
 
         private static void PrintList(Dictionary<string, List<string>> orderedCompanyList)
         {
-            foreach (KeyValuePair<string, List<string>> keyValuePair in orderedCompanyList) //print list
+            foreach (KeyValuePair<string, List<string>> keyValuePair in orderedCompanyList)
             {
                 string companyName = keyValuePair.Key;
+
                 Console.WriteLine($"{companyName}");
+
                 foreach (string employeeID in keyValuePair.Value)
                 {
                     Console.WriteLine($"-- {employeeID}");

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _04._Students
+namespace P04_Students
 {
     class Program
     {
@@ -14,7 +14,9 @@ namespace _04._Students
             for (int i = 0; i < count; i++)
             {
                 string[] input = Console.ReadLine().Split(" ").ToArray();
+
                 Student current = new Student(input[0], input[1], input[2]);
+
                 students.Add(current);
             }
 
@@ -35,8 +37,11 @@ namespace _04._Students
             SecondName = secondName;
             Grade = grade;
         }
+
         public string FirstName { get; set; }
+
         public string SecondName { get; set; }
+
         public string Grade { get; set; }
 
         public override string ToString()

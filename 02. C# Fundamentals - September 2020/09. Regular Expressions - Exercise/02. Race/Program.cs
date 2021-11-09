@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _02._Race
+namespace P02_Race
 {
     class Program
     {
         static void Main(string[] args)
         {
             Dictionary<string, long> racers = CreateRacersList();
+
             AddDistanceToRacers(racers);
+
             Dictionary<string, long> qualified = racers.OrderByDescending(a => a.Value).ToDictionary(a => a.Key, b => b.Value);
             List<string> winners = CreateWinnersList(qualified);
+
             PrintWinners(winners);
         }
 
@@ -49,12 +52,13 @@ namespace _02._Race
         private static List<string> CreateWinnersList(Dictionary<string, long> qualified)
         {
             List<string> winners = new List<string>();
-            foreach (var kvp in qualified)
+
+            foreach (KeyValuePair<string, long> keyValuePair in qualified)
             {
                 int i = 1;
                 if (i < 3)
                 {
-                    winners.Add(kvp.Key);
+                    winners.Add(keyValuePair.Key);
                 }
                 i++;
             }
@@ -75,7 +79,10 @@ namespace _02._Race
         {
             Dictionary<string, long> racers = new Dictionary<string, long>();
 
-            string[] participants = Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries).ToArray();
+            string[] participants = Console.ReadLine()
+                .Split(", ", StringSplitOptions.RemoveEmptyEntries)
+                .ToArray();
+
             foreach (string participant in participants)
             {
                 racers.Add(participant, 0);

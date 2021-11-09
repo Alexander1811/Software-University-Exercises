@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _07._Student_Academy
+namespace P07_StudentAcademy
 {
     class Program
     {
@@ -31,6 +31,7 @@ namespace _07._Student_Academy
             }
 
             Dictionary<string, double> orderedStudentsList = ClearAndSortList(studentsList);
+
             PrintList(orderedStudentsList);
         }
 
@@ -49,7 +50,8 @@ namespace _07._Student_Academy
         {
             Dictionary<string, double> orderedStudentsList = new Dictionary<string, double>();
             Dictionary<string, double> clearedStudentsList = new Dictionary<string, double>();
-            foreach (KeyValuePair<string, List<double>> keyValuePair in studentsList) //remove lower grades
+
+            foreach (KeyValuePair<string, List<double>> keyValuePair in studentsList) 
             {
                 double average = keyValuePair.Value.Sum() / keyValuePair.Value.Count;
                 if (average >= 4.5)
@@ -57,7 +59,11 @@ namespace _07._Student_Academy
                     clearedStudentsList[keyValuePair.Key] = average;
                 }
             }
-            orderedStudentsList = clearedStudentsList.OrderByDescending(m => m.Value).ToDictionary(a => a.Key, b => b.Value); //order grades
+
+            orderedStudentsList = clearedStudentsList
+                .OrderByDescending(m => m.Value)
+                .ToDictionary(a => a.Key, b => b.Value);
+
             return orderedStudentsList;
         }
     }

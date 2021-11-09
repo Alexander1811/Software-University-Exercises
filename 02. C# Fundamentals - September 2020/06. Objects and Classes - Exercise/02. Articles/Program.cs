@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _02._Articles
+namespace P02_Articles
 {
     class Program
     {
@@ -14,9 +14,9 @@ namespace _02._Articles
 
             for (int i = 0; i < count; i++)
             {
-                string[] cmd = Console.ReadLine().Split(": ").ToArray();
-                string action = cmd[0];
-                string newContent = cmd[1];
+                string[] command = Console.ReadLine().Split(": ").ToArray();
+                string action = command[0];
+                string newContent = command[1];
 
                 switch (action)
                 {
@@ -34,9 +34,11 @@ namespace _02._Articles
                         break;
                 }
             }
+
             Console.WriteLine(article);
         }
     }
+
     class Article
     {
         public Article(string title, string content, string author)
@@ -47,17 +49,22 @@ namespace _02._Articles
         }
 
         public string Title { get; set; }
+
         public string Content { get; set; }
+
         public string Author { get; set; }
+
 
         public void Rename(string title)
         {
             Title = title;
         }
+
         public void Edit(string content)
         {
             Content = content;
         }
+
         public void ChangeAuthor(string author)
         {
             Author = author;
@@ -67,7 +74,5 @@ namespace _02._Articles
         {
             return $"{Title} - {Content}: {Author}";
         }
-
-
     }
 }

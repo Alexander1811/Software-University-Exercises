@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_05._Multiply_Big_Number</RootNamespace>
+    <RootNamespace>P05_MultiplyBigNumber</RootNamespace>
+    <AssemblyName>P05_MultiplyBigNumber</AssemblyName>
   </PropertyGroup>
 
 </Project>

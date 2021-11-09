@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _04._Caesar_Cipher
+namespace P04_CaesarCipher
 {
     class Program
     {
@@ -9,11 +9,10 @@ namespace _04._Caesar_Cipher
             string text = Console.ReadLine();
             string result = string.Empty;
 
-
             for (int i = 0; i < text.Length; i++)
             {
-                char character = text[i]; 
-                character += (char) 3;
+                char character = text[i];
+                character += (char)3;
 
                 result += character;
             }

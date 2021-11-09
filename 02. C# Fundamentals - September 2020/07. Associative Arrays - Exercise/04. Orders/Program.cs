@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _04._Orders
+namespace P04_Orders
 {
     class Program
     {
@@ -14,11 +14,14 @@ namespace _04._Orders
             string command;
             while ((command = Console.ReadLine()) != "buy")
             {
-                string[] input = command.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToArray();
+                string[] input = command
+                    .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                    .ToArray();
 
                 string product = input[0];
                 double price = double.Parse(input[1]);
                 int quantity = int.Parse(input[2]);
+
                 AddToCollections(productQuantities, productPrices, product, price, quantity);
             }
 
@@ -34,6 +37,7 @@ namespace _04._Orders
                 double price = kvp.Value;
                 long quantity = productQuantities[name];
                 double totalPrice = price * quantity;
+
                 Console.WriteLine($"{kvp.Key} -> {totalPrice:f2}");
             }
         }

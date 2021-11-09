@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _03._Legendary_Farming
+namespace P03_LegendaryFarming
 {
     class Program
     {
@@ -20,7 +20,9 @@ namespace _03._Legendary_Farming
             while (isObtained != true)
             {
                 string input = Console.ReadLine().ToLower();
-                string[] argument = input.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToArray();
+                string[] argument = input
+                    .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                    .ToArray();
 
                 for (int i = 0; i < argument.Length; i += 2)
                 {
@@ -63,14 +65,22 @@ namespace _03._Legendary_Farming
             {
                 legendaryItem = "Dragonwrath";
             }
+
             keyMaterials[material] -= 250;
+
             Console.WriteLine($"{legendaryItem} obtained!");
         }
 
         private static void PrintRemainingMaterials(Dictionary<string, int> keyMaterials, Dictionary<string, int> junkMaterials)
         {
-            keyMaterials = keyMaterials.OrderByDescending(kvp => kvp.Value).ThenBy(kvp => kvp.Key).ToDictionary(a => a.Key, b => b.Value);
-            junkMaterials = junkMaterials.OrderBy(kvp => kvp.Key).ToDictionary(a => a.Key, b => b.Value);
+            keyMaterials = keyMaterials
+                .OrderByDescending(kvp => kvp.Value)
+                .ThenBy(kvp => kvp.Key)
+                .ToDictionary(a => a.Key, b => b.Value);
+            junkMaterials = junkMaterials
+                .OrderBy(kvp => kvp.Key)
+                .ToDictionary(a => a.Key, b => b.Value);
+
             foreach (var keyValuePair in keyMaterials)
             {
                 Console.WriteLine($"{keyValuePair.Key}: {keyValuePair.Value}");

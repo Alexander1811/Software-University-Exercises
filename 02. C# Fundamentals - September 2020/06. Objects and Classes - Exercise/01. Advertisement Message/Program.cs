@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01._Advertisement_Message
+namespace P01_AdvertisementMessage
 {
     class Program
     {
@@ -10,6 +10,7 @@ namespace _01._Advertisement_Message
             string[] events = { "Now I feel good.", "I have succeeded with this product.", "Makes miracles. I am happy of the results!", "I cannot believe but now I feel awesome.", "Try it yourself, I am very satisfied.", "I feel great!"};
             string[] authors = { "Diana", "Petya", "Stella", "Elena", "Katya", "Iva", "Annie", "Eva"};
             string[] cities = { "Burgas", "Sofia", "Plovdiv", "Varna", "Ruse"};
+
             Random number = new Random();
             int count = int.Parse(Console.ReadLine());
 
@@ -36,8 +37,12 @@ namespace _01._Advertisement_Message
         }
 
         public string Phrases { get; set; }
+
         public string Events { get; set; }
+
         public string Authors { get; set; }
+
         public string Cities { get; set; }
+
     }
 }

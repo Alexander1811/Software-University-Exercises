@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _06._Courses
+namespace P06_Courses
 {
     class Program
     {
@@ -54,8 +54,11 @@ namespace _06._Courses
 
         private static Dictionary<string, List<string>> SortList(Dictionary<string, List<string>> coursesList)
         {
-            Dictionary<string, List<string>> orderedCoursesList = coursesList.OrderByDescending(m => m.Value.Count).ToDictionary(a => a.Key, b => b.Value); //sort each key
-            foreach (KeyValuePair<string, List<string>> keyValuePair in orderedCoursesList) //sort names in each value
+            Dictionary<string, List<string>> orderedCoursesList = coursesList
+                .OrderByDescending(m => m.Value.Count)
+                .ToDictionary(a => a.Key, b => b.Value); 
+
+            foreach (KeyValuePair<string, List<string>> keyValuePair in orderedCoursesList) 
             {
                 List<string> orderedStudentsList = keyValuePair.Value;
                 orderedStudentsList.Sort();

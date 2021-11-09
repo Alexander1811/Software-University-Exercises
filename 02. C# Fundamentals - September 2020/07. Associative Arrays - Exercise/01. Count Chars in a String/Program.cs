@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _01._Count_Chars_in_a_String
+namespace P01_CountCharsInAString
 {
     class Program
     {

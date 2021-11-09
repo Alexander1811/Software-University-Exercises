@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_02._Character_Multiplier</RootNamespace>
+    <RootNamespace>P02_CharacterMultiplier</RootNamespace>
+    <AssemblyName>P02_CharacterMultiplier</AssemblyName>
   </PropertyGroup>
 
 </Project>

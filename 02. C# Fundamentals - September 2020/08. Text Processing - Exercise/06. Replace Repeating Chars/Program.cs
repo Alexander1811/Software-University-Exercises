@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _06._Replace_Repeating_Chars
+namespace P06_ReplaceRepeatingChars
 {
     class Program
     {
@@ -30,6 +30,7 @@ namespace _06._Replace_Repeating_Chars
 
                 input = input.Remove(i + 1, subsequnceLength);
             }
+
             Console.WriteLine(input);
         }
     }

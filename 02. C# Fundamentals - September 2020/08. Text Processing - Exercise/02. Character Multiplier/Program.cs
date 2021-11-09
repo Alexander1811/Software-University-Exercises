@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace _02._Character_Multiplier
+namespace P02_CharacterMultiplier
 {
     class Program
     {

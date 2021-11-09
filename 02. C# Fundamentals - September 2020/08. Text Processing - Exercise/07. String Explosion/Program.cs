@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Linq;
 
-namespace _07._String_Explosion
+namespace P07_StringExplosion
 {
     class Program
     {
@@ -9,6 +8,7 @@ namespace _07._String_Explosion
         {
             string field = Console.ReadLine();
             int bomb = 0;
+
             for (int i = 0; i < field.Length; i++)
             {
                 if (bomb > 0 && field[i] != '>')
@@ -22,6 +22,7 @@ namespace _07._String_Explosion
                     bomb += int.Parse(field[i + 1].ToString()); 
                 }
             }
+
             Console.WriteLine(field);
         }
     }
