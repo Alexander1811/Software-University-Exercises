@@ -1,10 +1,11 @@
-﻿using System;
-using WarCroft.Constants;
-using WarCroft.Entities.Inventory;
-using WarCroft.Entities.Items;
-
-namespace WarCroft.Entities.Characters.Contracts
+﻿namespace WarCroft.Entities.Characters.Contracts
 {
+    using System;
+
+    using Constants;
+    using Inventory;
+    using Items;
+
     public abstract class Character
     {
         private string name;

@@ -1,7 +1,7 @@
-﻿using Bakery.Models.Tables.Contracts;
-
-namespace Bakery.Models.Tables
+﻿namespace Bakery.Models.Tables
 {
+    using Contracts;
+
     public class OutsideTable : Table, ITable
     {
         private const decimal InitialPricePerPerson = 3.50M;

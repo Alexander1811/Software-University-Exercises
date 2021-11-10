@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using WarCroft.Constants;
-using WarCroft.Entities.Characters;
-using WarCroft.Entities.Characters.Contracts;
-using WarCroft.Entities.Items;
-
-namespace WarCroft.Core
+﻿namespace WarCroft.Core
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
+    using Constants;
+    using Entities.Characters;
+    using Entities.Characters.Contracts;
+    using Entities.Items;
+
     public class WarController
     {
         private readonly IDictionary<string, Character> characterParty;

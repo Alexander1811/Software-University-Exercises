@@ -1,9 +1,10 @@
-using NUnit.Framework;
-using System;
-using System.Linq;
-
 namespace BankSafe.Tests
 {
+    using System;
+    using System.Linq;
+
+    using NUnit.Framework;
+
     public class BankVaultTests
     {
         private BankVault bankVault;
@@ -33,7 +34,7 @@ namespace BankSafe.Tests
 
             Item secondItem = new Item("Misho", "DEF456");
 
-            Assert.Throws<ArgumentException>(()=> this.bankVault.AddItem(cell, secondItem));
+            Assert.Throws<ArgumentException>(() => this.bankVault.AddItem(cell, secondItem));
         }
 
         [Test]
@@ -92,7 +93,7 @@ namespace BankSafe.Tests
 
             string result = this.bankVault.RemoveItem(cell, item);
             Assert.That(this.bankVault.VaultCells.Values.Where(i => i == item).Count, Is.EqualTo(0));
-            Assert.That(result, Is.EqualTo($"Remove item:{item.ItemId} successfully!"));            
+            Assert.That(result, Is.EqualTo($"Remove item:{item.ItemId} successfully!"));
         }
 
         [Test]

@@ -8,6 +8,8 @@
     <RuntimeFrameworkVersion>2.1.0</RuntimeFrameworkVersion>
     <StartupObject>PlayersAndMonsters.StartUp</StartupObject>
     <Version>2.1.0</Version>
+    <AssemblyName>PlayersAndMonsters</AssemblyName>
+    <RootNamespace>PlayersAndMonsters</RootNamespace>
   </PropertyGroup>
 
 </Project>

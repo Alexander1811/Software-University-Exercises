@@ -1,13 +1,13 @@
-﻿using WarCroft.Entities.Characters.Contracts;
-
-namespace WarCroft.Entities.Items
+﻿namespace WarCroft.Entities.Items
 {
+    using Characters.Contracts;
+
     public class HealthPotion : Item
     {
         private const int PotionWeight = 5;
         private const int PotionStrength = 20;
 
-        public HealthPotion() 
+        public HealthPotion()
             : base(PotionWeight)
         {
         }
@@ -15,7 +15,7 @@ namespace WarCroft.Entities.Items
         public override void AffectCharacter(Character character)
         {
             base.AffectCharacter(character);
-            
+
             character.Health += PotionStrength;
         }
     }

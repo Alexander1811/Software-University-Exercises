@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AquaShop.Models.Decorations.Contracts;
-using AquaShop.Repositories.Contracts;
-
-namespace AquaShop.Repositories
+﻿namespace AquaShop.Repositories
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using Contracts;
+    using Models.Decorations.Contracts;
+
     public class DecorationRepository : IRepository<IDecoration>
     {
-        private List<IDecoration> models;
+        private readonly List<IDecoration> models;
 
         public DecorationRepository()
         {

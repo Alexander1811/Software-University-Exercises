@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Bakery.Utilities.Messages
+﻿namespace Bakery.Utilities.Messages
 {
     public static class OutputMessages
     {

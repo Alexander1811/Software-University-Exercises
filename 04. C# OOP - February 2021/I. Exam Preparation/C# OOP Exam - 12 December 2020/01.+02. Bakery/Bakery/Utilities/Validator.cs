@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Bakery.Utilities
+﻿namespace Bakery.Utilities
 {
+    using System;
+
     public static class Validator
     {
         public static void ThrowIfStringIsNullOrWhitespace(string value, string message)

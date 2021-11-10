@@ -1,7 +1,5 @@
 ﻿namespace AquaShop.Utilities.Messages
 {
-    using System;
-
     public static class ExceptionMessages
     {
         public const string InvalidFishName = "Fish name cannot be null or empty.";

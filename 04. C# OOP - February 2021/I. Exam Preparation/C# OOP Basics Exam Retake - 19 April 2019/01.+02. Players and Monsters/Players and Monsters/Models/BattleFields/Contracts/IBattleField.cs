@@ -1,4 +1,4 @@
-﻿namespace Players_and_Monsters.Models.BattleFields.Contracts
+﻿namespace PlayersAndMonsters.Models.BattleFields.Contracts
 {
     using Players.Contracts;
 

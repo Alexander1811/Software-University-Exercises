@@ -1,16 +1,17 @@
-﻿namespace Players_and_Monsters.Core
+﻿namespace PlayersAndMonsters.Core
 {
     using System.Text;
+
     using Contracts;
-    using Players_and_Monsters.Common;
-    using Players_and_Monsters.Core.Factories;
-    using Players_and_Monsters.Core.Factories.Contracts;
-    using Players_and_Monsters.Models.BattleFields;
-    using Players_and_Monsters.Models.BattleFields.Contracts;
-    using Players_and_Monsters.Models.Cards.Contracts;
-    using Players_and_Monsters.Models.Players.Contracts;
-    using Players_and_Monsters.Repositories;
-    using Players_and_Monsters.Repositories.Contracts;
+    using Common;
+    using Factories;
+    using Factories.Contracts;
+    using Models.BattleFields;
+    using Models.BattleFields.Contracts;
+    using Models.Cards.Contracts;
+    using Models.Players.Contracts;
+    using Repositories;
+    using Repositories.Contracts;
 
     public class ManagerController : IManagerController
     {

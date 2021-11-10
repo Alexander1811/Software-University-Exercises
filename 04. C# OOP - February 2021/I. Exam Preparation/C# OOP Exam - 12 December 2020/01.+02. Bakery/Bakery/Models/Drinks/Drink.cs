@@ -1,10 +1,9 @@
-﻿using System;
-using Bakery.Models.Drinks.Contracts;
-using Bakery.Utilities;
-using Bakery.Utilities.Messages;
-
-namespace Bakery.Models.Drinks
+﻿namespace Bakery.Models.Drinks
 {
+    using Contracts;
+    using Utilities;
+    using Utilities.Messages;
+
     public abstract class Drink : IDrink
     {
         private string name;

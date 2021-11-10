@@ -1,10 +1,10 @@
-﻿using EasterRaces.Core.Contracts;
-using EasterRaces.Core.Entities;
-using EasterRaces.IO;
-using EasterRaces.IO.Contracts;
-
-namespace EasterRaces
+﻿namespace EasterRaces
 {
+    using Core.Contracts;
+    using Core.Entities;
+    using IO;
+    using IO.Contracts;
+
     public class StartUp
     {
         public static void Main()

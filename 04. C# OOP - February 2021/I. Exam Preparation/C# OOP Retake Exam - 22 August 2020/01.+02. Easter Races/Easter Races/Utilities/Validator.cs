@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace EasterRaces.Utilities
+﻿namespace EasterRaces.Utilities
 {
+    using System;
+
     public static class Validator
     {
         public static void ThrowIfStringIsNullOrWhiteSpaceOrLessThenMinLength(string value, int minLength, string message)
@@ -11,6 +11,7 @@ namespace EasterRaces.Utilities
                 throw new ArgumentException(message);
             }
         }
+
         public static void ThrowIfIntegerIsInRange(int value, int minValue, int maxValue, string message)
         {
             if (value < minValue || value > maxValue)
@@ -18,6 +19,7 @@ namespace EasterRaces.Utilities
                 throw new ArgumentException(message);
             }
         }
+
         public static void ThrowIfObjectIsNull(object obj, string message)
         {
             if (obj == null)
@@ -25,6 +27,7 @@ namespace EasterRaces.Utilities
                 throw new ArgumentNullException(message);
             }
         }
+
         public static void ThrowIfIntegerIsLessThanMinValue(int value, int minValue, string message)
         {
             if (value < minValue)

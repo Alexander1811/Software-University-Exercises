@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using WarCroft.Constants;
-using WarCroft.Entities.Items;
-
-namespace WarCroft.Entities.Inventory
+﻿namespace WarCroft.Entities.Inventory
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using Constants;
+    using Items;
+
     public abstract class Bag : IBag
     {
         private List<Item> items;

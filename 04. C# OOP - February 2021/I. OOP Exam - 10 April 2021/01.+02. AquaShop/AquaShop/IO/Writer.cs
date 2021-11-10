@@ -1,7 +1,8 @@
 ﻿namespace AquaShop.IO
 {
     using System;
-    using AquaShop.IO.Contracts;
+
+    using Contracts;
 
     public class Writer : IWriter
     {

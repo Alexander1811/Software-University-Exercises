@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using EasterRaces.Models.Drivers.Contracts;
-using EasterRaces.Models.Races.Contracts;
-using EasterRaces.Utilities;
-using EasterRaces.Utilities.Messages;
-
-namespace EasterRaces.Models.Races.Entities
+﻿namespace EasterRaces.Models.Races.Entities
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using Contracts;
+    using Drivers.Contracts;
+    using Utilities;
+    using Utilities.Messages;
+
     public class Race : IRace
     {
         private const int MinNameLength = 5;
@@ -47,7 +48,7 @@ namespace EasterRaces.Models.Races.Entities
         }
 
         public IReadOnlyCollection<IDriver> Drivers => this.drivers.AsReadOnly();
-       
+
         public void AddDriver(IDriver driver)
         {
             Validator.ThrowIfObjectIsNull(driver, ExceptionMessages.DriverInvalid);

@@ -1,19 +1,20 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using EasterRaces.Core.Contracts;
-using EasterRaces.Models.Cars.Contracts;
-using EasterRaces.Models.Cars.Entities;
-using EasterRaces.Models.Drivers.Contracts;
-using EasterRaces.Models.Drivers.Entities;
-using EasterRaces.Models.Races.Contracts;
-using EasterRaces.Models.Races.Entities;
-using EasterRaces.Repositories.Contracts;
-using EasterRaces.Repositories.Entities;
-using EasterRaces.Utilities.Messages;
-
-namespace EasterRaces.Core.Entities
+﻿namespace EasterRaces.Core.Entities
 {
+    using System;
+    using System.Linq;
+    using System.Text;
+
+    using Contracts;
+    using Models.Cars.Contracts;
+    using Models.Cars.Entities;
+    using Models.Drivers.Contracts;
+    using Models.Drivers.Entities;
+    using Models.Races.Contracts;
+    using Models.Races.Entities;
+    using Repositories.Contracts;
+    using Repositories.Entities;
+    using Utilities.Messages;
+
     public class ChampionshipController : IChampionshipController
     {
         private const int MinParticipantsCount = 3;

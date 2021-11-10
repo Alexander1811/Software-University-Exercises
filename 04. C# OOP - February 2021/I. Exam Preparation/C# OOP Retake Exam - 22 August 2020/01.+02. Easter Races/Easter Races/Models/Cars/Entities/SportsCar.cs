@@ -1,7 +1,7 @@
-﻿using EasterRaces.Models.Cars.Contracts;
-
-namespace EasterRaces.Models.Cars.Entities
+﻿namespace EasterRaces.Models.Cars.Entities
 {
+    using Contracts;
+
     public class SportsCar : Car, ICar
     {
         private const double SportsCarCubicCentimeters = 3000;

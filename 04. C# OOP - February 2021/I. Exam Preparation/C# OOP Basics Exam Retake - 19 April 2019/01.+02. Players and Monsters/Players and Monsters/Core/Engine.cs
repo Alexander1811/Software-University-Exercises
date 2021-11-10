@@ -1,9 +1,10 @@
-﻿using System;
-using Players_and_Monsters.Core.Contracts;
-using Players_and_Monsters.IO.Contracts;
-
-namespace Players_and_Monsters.Core
+﻿namespace PlayersAndMonsters.Core
 {
+    using System;
+
+    using Contracts;
+    using IO.Contracts;
+
     public class Engine : IEngine
     {
         private IManagerController managerController;

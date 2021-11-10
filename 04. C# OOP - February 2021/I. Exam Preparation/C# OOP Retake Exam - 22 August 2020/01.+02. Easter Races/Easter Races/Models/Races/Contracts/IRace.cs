@@ -1,8 +1,8 @@
-﻿using EasterRaces.Models.Drivers.Contracts;
-
-namespace EasterRaces.Models.Races.Contracts
+﻿namespace EasterRaces.Models.Races.Contracts
 {
     using System.Collections.Generic;
+
+    using Drivers.Contracts;
 
     public interface IRace
     {

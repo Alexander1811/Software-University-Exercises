@@ -1,7 +1,7 @@
-﻿using EasterRaces.Models.Cars.Contracts;
-
-namespace EasterRaces.Models.Drivers.Contracts
+﻿namespace EasterRaces.Models.Drivers.Contracts
 {
+    using Cars.Contracts;
+
     public interface IDriver
     {
         string Name { get; }

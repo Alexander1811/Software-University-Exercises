@@ -1,8 +1,8 @@
-﻿using Players_and_Monsters.Models.Players.Contracts;
-using Players_and_Monsters.Repositories.Contracts;
-
-namespace Players_and_Monsters.Models.Players
+﻿namespace PlayersAndMonsters.Models.Players
 {
+    using Contracts;
+    using Repositories.Contracts;
+
     public class Advanced : Player, IPlayer
     {
         private const int InitalHealth = 250;

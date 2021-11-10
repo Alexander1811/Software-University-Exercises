@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
-using WarCroft.Entities.Items;
-
-namespace WarCroft.Entities.Inventory
+﻿namespace WarCroft.Entities.Inventory
 {
+    using System.Collections.Generic;
+
+    using Items;
+
     public interface IBag
     {
         int Capacity { get; set; }

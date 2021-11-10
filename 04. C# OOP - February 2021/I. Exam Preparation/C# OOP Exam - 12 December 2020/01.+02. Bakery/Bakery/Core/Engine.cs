@@ -1,9 +1,10 @@
 ﻿namespace Bakery.Core
 {
     using System;
-    using Bakery.Core.Contracts;
-    using Bakery.IO;
-    using Bakery.IO.Contracts;
+
+    using Contracts;
+    using IO;
+    using IO.Contracts;
 
     public class Engine : IEngine
     {

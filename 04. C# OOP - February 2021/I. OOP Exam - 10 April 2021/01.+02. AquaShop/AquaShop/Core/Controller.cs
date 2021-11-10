@@ -1,23 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using AquaShop.Core.Contracts;
-using AquaShop.Models.Aquariums;
-using AquaShop.Models.Aquariums.Contracts;
-using AquaShop.Models.Decorations;
-using AquaShop.Models.Decorations.Contracts;
-using AquaShop.Models.Fish;
-using AquaShop.Models.Fish.Contracts;
-using AquaShop.Repositories;
-using AquaShop.Utilities.Messages;
-
-namespace AquaShop.Core
+﻿namespace AquaShop.Core
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
+    using Contracts;
+    using Models.Aquariums;
+    using Models.Aquariums.Contracts;
+    using Models.Decorations;
+    using Models.Decorations.Contracts;
+    using Models.Fish;
+    using Models.Fish.Contracts;
+    using Repositories;
+    using Utilities.Messages;
+
     public class Controller : IController
     {
-        private DecorationRepository decorations;
-        private Dictionary<string, IAquarium> aquariums;
+        private readonly DecorationRepository decorations;
+        private readonly Dictionary<string, IAquarium> aquariums;
 
         public Controller()
         {
@@ -103,7 +104,7 @@ namespace AquaShop.Core
 
         public string FeedFish(string aquariumName)
         {
-            IAquarium aquarium = this.aquariums.FirstOrDefault(a=>a.Key == aquariumName).Value;
+            IAquarium aquarium = this.aquariums.FirstOrDefault(a => a.Key == aquariumName).Value;
 
             aquarium.Feed();
 

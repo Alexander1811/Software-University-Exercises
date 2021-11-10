@@ -1,8 +1,10 @@
+using FestivalManager.Entities;
+
 namespace FestivalManager.Tests
 {
     using System;
     using System.Linq;
-    using FestivalManager.Entities;
+    
     using NUnit.Framework;
 
     [TestFixture]

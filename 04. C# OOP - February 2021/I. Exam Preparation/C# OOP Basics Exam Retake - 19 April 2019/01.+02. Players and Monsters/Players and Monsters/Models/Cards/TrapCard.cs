@@ -1,7 +1,7 @@
-﻿using Players_and_Monsters.Models.Cards.Contracts;
-
-namespace Players_and_Monsters.Models.Cards
+﻿namespace PlayersAndMonsters.Models.Cards
 {
+    using Contracts;
+
     public class TrapCard : Card, ICard
     {
         private const int InitalDamagePoints = 120;

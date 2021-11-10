@@ -1,15 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Bakery.Core.Contracts;
-using Bakery.Core.Factories;
-using Bakery.Models.BakedFoods.Contracts;
-using Bakery.Models.Drinks.Contracts;
-using Bakery.Models.Tables.Contracts;
-using Bakery.Utilities.Messages;
-
-namespace Bakery.Core
+﻿namespace Bakery.Core
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+
+    using Contracts;
+    using Factories;
+    using Models.BakedFoods.Contracts;
+    using Models.Drinks.Contracts;
+    using Models.Tables.Contracts;
+    using Utilities.Messages;
+
     public class Controller : IController
     {
         private readonly IList<IBakedFood> bakedFoods;

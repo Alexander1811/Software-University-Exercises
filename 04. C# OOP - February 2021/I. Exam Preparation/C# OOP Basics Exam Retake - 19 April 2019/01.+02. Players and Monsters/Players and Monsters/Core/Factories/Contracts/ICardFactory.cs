@@ -1,6 +1,6 @@
-﻿namespace Players_and_Monsters.Core.Factories.Contracts
+﻿namespace PlayersAndMonsters.Core.Factories.Contracts
 {
-    using Players_and_Monsters.Models.Cards.Contracts;
+    using Models.Cards.Contracts;
 
     public interface ICardFactory
     {

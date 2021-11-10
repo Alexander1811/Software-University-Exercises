@@ -1,9 +1,10 @@
-﻿using System;
-using EasterRaces.Core.Contracts;
-using EasterRaces.IO.Contracts;
-
-namespace EasterRaces.Core.Entities
+﻿namespace EasterRaces.Core.Entities
 {
+    using System;
+
+    using Contracts;
+    using IO.Contracts;
+
     public class Engine
     {
         private readonly IChampionshipController controller;
@@ -64,6 +65,5 @@ namespace EasterRaces.Core.Entities
                 command = this.reader.ReadLine();
             }
         }
-
     }
 }

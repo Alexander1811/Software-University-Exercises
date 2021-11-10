@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Players_and_Monsters.Common
+﻿namespace PlayersAndMonsters.Common
 {
+    using System;
+
     public static class Validator
     {
         public static void ThrowIfStringIsNullOrEmpty(string value, string message)
@@ -11,6 +11,7 @@ namespace Players_and_Monsters.Common
                 throw new ArgumentException(message);
             }
         }
+
         public static void ThrowIfIntegerIsBelowZero(int value, string message)
         {
             if (value < 0)
@@ -18,7 +19,7 @@ namespace Players_and_Monsters.Common
                 throw new ArgumentException(message);
             }
         }
-        
+
         public static void ThrowIfObjectIsNull(object obj, string message)
         {
             if (obj == null)

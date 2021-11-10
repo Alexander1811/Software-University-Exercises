@@ -1,9 +1,9 @@
-﻿using Players_and_Monsters.Core.Factories.Contracts;
-using Players_and_Monsters.Models.Cards;
-using Players_and_Monsters.Models.Cards.Contracts;
-
-namespace Players_and_Monsters.Core.Factories
+﻿namespace PlayersAndMonsters.Core.Factories
 {
+    using Contracts;
+    using Models.Cards;
+    using Models.Cards.Contracts;
+
     public class CardFactory : ICardFactory
     {
         public ICard CreateCard(string type, string name)

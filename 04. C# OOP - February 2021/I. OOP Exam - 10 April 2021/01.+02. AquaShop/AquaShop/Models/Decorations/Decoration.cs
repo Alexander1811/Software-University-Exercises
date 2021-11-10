@@ -1,7 +1,7 @@
-﻿using AquaShop.Models.Decorations.Contracts;
-
-namespace AquaShop.Models.Decorations
+﻿namespace AquaShop.Models.Decorations
 {
+    using Contracts;
+
     public abstract class Decoration : IDecoration
     {
         protected Decoration(int comfort, decimal price)

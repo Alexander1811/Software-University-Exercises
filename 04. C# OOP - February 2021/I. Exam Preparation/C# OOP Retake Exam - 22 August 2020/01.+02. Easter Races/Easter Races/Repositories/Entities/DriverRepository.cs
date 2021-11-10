@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using EasterRaces.Models.Drivers.Contracts;
-using EasterRaces.Repositories.Contracts;
-
-namespace EasterRaces.Repositories.Entities
+﻿namespace EasterRaces.Repositories.Entities
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using Contracts;
+    using Models.Drivers.Contracts;
+
     public class DriverRepository : IRepository<IDriver>
     {
         private readonly Dictionary<string, IDriver> driverByName;

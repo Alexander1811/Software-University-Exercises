@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using EasterRaces.Models.Races.Contracts;
-using EasterRaces.Repositories.Contracts;
-
-namespace EasterRaces.Repositories.Entities
+﻿namespace EasterRaces.Repositories.Entities
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using Contracts;
+    using Models.Races.Contracts;
+
     public class RaceRepository : IRepository<IRace>
     {
         private readonly Dictionary<string, IRace> racesByName;

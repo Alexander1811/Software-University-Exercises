@@ -1,9 +1,10 @@
-﻿using System;
-using AquaShop.Models.Fish.Contracts;
-using AquaShop.Utilities.Messages;
-
-namespace AquaShop.Models.Fish
+﻿namespace AquaShop.Models.Fish
 {
+    using System;
+
+    using Contracts;
+    using Utilities.Messages;
+
     public abstract class Fish : IFish
     {
         private string name;

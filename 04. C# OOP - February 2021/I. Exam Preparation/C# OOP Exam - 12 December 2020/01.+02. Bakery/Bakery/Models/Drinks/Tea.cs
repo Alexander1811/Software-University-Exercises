@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Bakery.Models.Drinks
+﻿namespace Bakery.Models.Drinks
 {
     public class Tea : Drink
     {

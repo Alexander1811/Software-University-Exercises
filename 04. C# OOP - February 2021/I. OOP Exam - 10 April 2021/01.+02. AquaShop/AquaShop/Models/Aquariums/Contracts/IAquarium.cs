@@ -2,8 +2,8 @@
 {
     using System.Collections.Generic;
 
-    using AquaShop.Models.Decorations.Contracts;
-    using AquaShop.Models.Fish.Contracts;
+    using Decorations.Contracts;
+    using Fish.Contracts;
 
     public interface IAquarium
     {

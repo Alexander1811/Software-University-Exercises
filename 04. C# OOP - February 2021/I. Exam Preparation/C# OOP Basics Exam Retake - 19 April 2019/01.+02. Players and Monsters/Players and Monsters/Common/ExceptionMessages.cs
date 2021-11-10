@@ -1,4 +1,4 @@
-﻿namespace Players_and_Monsters.Common
+﻿namespace PlayersAndMonsters.Common
 {
     public static class ExceptionMessages
     {

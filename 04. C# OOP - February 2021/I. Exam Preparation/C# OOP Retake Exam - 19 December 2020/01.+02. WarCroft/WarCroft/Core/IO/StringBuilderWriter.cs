@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using WarCroft.Core.IO.Contracts;
-
-namespace WarCroft.Core.IO
+﻿namespace WarCroft.Core.IO
 {
+    using System.Text;
+
+    using Contracts;
+
     public class StringBuilderWriter : IWriter
     {
         public StringBuilder sb = new StringBuilder();

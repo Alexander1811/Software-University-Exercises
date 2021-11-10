@@ -1,8 +1,8 @@
 ﻿namespace Bakery.IO
 {
-    using Bakery.IO.Contracts;
     using System;
-    using System.IO;
+    
+    using Contracts;
 
     public class Writer : IWriter
     {

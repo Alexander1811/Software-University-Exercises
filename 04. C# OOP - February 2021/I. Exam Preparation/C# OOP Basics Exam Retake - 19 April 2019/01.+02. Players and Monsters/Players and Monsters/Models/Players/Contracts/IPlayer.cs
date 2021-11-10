@@ -1,6 +1,6 @@
-﻿namespace Players_and_Monsters.Models.Players.Contracts
+﻿namespace PlayersAndMonsters.Models.Players.Contracts
 {
-    using Players_and_Monsters.Repositories.Contracts;
+    using Repositories.Contracts;
 
     public interface IPlayer
     {

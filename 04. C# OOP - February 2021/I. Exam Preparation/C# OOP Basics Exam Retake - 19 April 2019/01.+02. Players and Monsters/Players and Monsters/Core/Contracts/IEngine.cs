@@ -1,4 +1,4 @@
-﻿namespace Players_and_Monsters.Core.Contracts
+﻿namespace PlayersAndMonsters.Core.Contracts
 {
     public interface IEngine
     {

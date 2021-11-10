@@ -1,7 +1,7 @@
 ﻿namespace Bakery.Models.Tables.Contracts
 {
-    using Bakery.Models.BakedFoods.Contracts;
-    using Bakery.Models.Drinks.Contracts;
+    using BakedFoods.Contracts;
+    using Drinks.Contracts;
 
     public interface ITable
     {

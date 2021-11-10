@@ -1,4 +1,4 @@
-﻿namespace Players_and_Monsters.IO.Contracts
+﻿namespace PlayersAndMonsters.IO.Contracts
 {
     public interface IReader
     {

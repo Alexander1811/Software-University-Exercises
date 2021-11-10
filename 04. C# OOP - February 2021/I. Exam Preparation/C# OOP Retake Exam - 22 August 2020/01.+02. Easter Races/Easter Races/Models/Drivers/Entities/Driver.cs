@@ -1,10 +1,10 @@
-﻿using EasterRaces.Models.Cars.Contracts;
-using EasterRaces.Models.Drivers.Contracts;
-using EasterRaces.Utilities;
-using EasterRaces.Utilities.Messages;
-
-namespace EasterRaces.Models.Drivers.Entities
+﻿namespace EasterRaces.Models.Drivers.Entities
 {
+    using Contracts;
+    using Cars.Contracts;
+    using Utilities;
+    using Utilities.Messages;
+
     public class Driver : IDriver
     {
         private const int MinNameLength = 5;

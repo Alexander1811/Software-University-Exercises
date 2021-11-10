@@ -1,10 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework;
-
 namespace TheRace.Tests
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using NUnit.Framework;
+
     public class RaceEntryTests
     {
         private const string ExistingDriver = "Driver {0} is already added.";

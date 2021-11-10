@@ -18,7 +18,6 @@
         public const string CharacterAttacksSelf = "Cannot attack self!";
 
         //WarController
-
         public const string InvalidCharacterType = "Invalid character type \"{0}\"!";
 
         public const string InvalidItem = "Invalid item \"{0}\"!";

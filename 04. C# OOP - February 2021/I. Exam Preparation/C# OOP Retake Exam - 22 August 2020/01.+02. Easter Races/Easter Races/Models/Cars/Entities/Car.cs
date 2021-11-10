@@ -1,9 +1,9 @@
-﻿using EasterRaces.Models.Cars.Contracts;
-using EasterRaces.Utilities;
-using EasterRaces.Utilities.Messages;
-
-namespace EasterRaces.Models.Cars.Entities
+﻿namespace EasterRaces.Models.Cars.Entities
 {
+    using Contracts;
+    using Utilities;
+    using Utilities.Messages;
+
     public abstract class Car : ICar
     {
         private const int MinModelNameLength = 4;

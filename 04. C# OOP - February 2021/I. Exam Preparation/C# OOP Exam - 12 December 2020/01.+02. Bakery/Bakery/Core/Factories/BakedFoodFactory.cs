@@ -1,12 +1,13 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using Bakery.Core.Factories.Contracts;
-using Bakery.Models.BakedFoods;
-using Bakery.Models.BakedFoods.Contracts;
-
-namespace Bakery.Core.Factories
+﻿namespace Bakery.Core.Factories
 {
+    using System;
+    using System.Linq;
+    using System.Reflection;
+
+    using Contracts;
+    using Models.BakedFoods;
+    using Models.BakedFoods.Contracts;
+
     public class BakedFoodFactory : IBakedFoodFactory
     {
         public IBakedFood CreateFood(string type, string name, decimal price)

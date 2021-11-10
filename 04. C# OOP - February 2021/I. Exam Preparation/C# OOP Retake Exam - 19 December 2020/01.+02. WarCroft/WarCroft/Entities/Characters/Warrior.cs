@@ -1,10 +1,11 @@
-﻿using System;
-using WarCroft.Constants;
-using WarCroft.Entities.Characters.Contracts;
-using WarCroft.Entities.Inventory;
-
-namespace WarCroft.Entities.Characters
+﻿namespace WarCroft.Entities.Characters
 {
+    using System;
+
+    using Constants;
+    using Contracts;
+    using Inventory;
+
     public class Warrior : Character, IAttacker
     {
         private const double WarriorBaseHealth = 100;

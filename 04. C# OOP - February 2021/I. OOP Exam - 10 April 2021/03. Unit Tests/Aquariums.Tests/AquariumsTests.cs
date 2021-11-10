@@ -1,6 +1,7 @@
 ﻿namespace Aquariums.Tests
 {
     using System;
+
     using NUnit.Framework;
 
     public class AquariumsTests

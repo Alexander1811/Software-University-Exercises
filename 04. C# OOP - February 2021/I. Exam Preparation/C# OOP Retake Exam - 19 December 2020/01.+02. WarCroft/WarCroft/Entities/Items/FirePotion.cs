@@ -1,7 +1,7 @@
-﻿using WarCroft.Entities.Characters.Contracts;
-
-namespace WarCroft.Entities.Items
+﻿namespace WarCroft.Entities.Items
 {
+    using Characters.Contracts;
+
     public class FirePotion : Item
     {
         private const int PotionWeight = 5;

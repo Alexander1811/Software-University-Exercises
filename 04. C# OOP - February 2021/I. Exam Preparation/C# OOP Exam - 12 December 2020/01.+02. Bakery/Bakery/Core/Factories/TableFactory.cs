@@ -1,12 +1,13 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using Bakery.Core.Factories.Contracts;
-using Bakery.Models.Tables;
-using Bakery.Models.Tables.Contracts;
-
-namespace Bakery.Core.Factories
+﻿namespace Bakery.Core.Factories
 {
+    using System;
+    using System.Linq;
+    using System.Reflection;
+
+    using Contracts;
+    using Models.Tables;
+    using Models.Tables.Contracts;
+
     public class TableFactory : ITableFactory
     {
         public ITable CreateTable(string type, int tableNumber, int capacity)

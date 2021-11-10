@@ -1,9 +1,9 @@
-﻿using Players_and_Monsters.Common;
-using Players_and_Monsters.Models.Players.Contracts;
-using Players_and_Monsters.Repositories.Contracts;
-
-namespace Players_and_Monsters.Models.Players
+﻿namespace PlayersAndMonsters.Models.Players
 {
+    using Common;
+    using Contracts;
+    using Repositories.Contracts;
+
     public abstract class Player : IPlayer
     {
         private string username;
@@ -41,7 +41,7 @@ namespace Players_and_Monsters.Models.Players
         }
 
         public bool IsDead => this.Health == 0;
-        
+
         public void TakeDamage(int damagePoints)
         {
             Validator.ThrowIfIntegerIsBelowZero(damagePoints, ExceptionMessages.InvalidDamagePoints);

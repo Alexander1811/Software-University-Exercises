@@ -1,13 +1,14 @@
-﻿using System;
-using WarCroft.Core.IO.Contracts;
-
-namespace WarCroft.Core.IO
+﻿namespace WarCroft.Core.IO
 {
-	public class ConsoleReader : IReader
-	{
-		public string ReadLine()
-		{
-			return Console.ReadLine();
-		}
-	}
+    using System;
+
+    using Contracts;
+
+    public class ConsoleReader : IReader
+    {
+        public string ReadLine()
+        {
+            return Console.ReadLine();
+        }
+    }
 }

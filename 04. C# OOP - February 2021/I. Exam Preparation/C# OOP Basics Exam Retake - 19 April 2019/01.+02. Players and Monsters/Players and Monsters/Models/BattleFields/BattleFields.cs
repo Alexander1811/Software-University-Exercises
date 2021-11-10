@@ -1,13 +1,14 @@
-﻿using System;
-using System.Linq;
-using Players_and_Monsters.Common;
-using Players_and_Monsters.Models.BattleFields.Contracts;
-using Players_and_Monsters.Models.Cards.Contracts;
-using Players_and_Monsters.Models.Players;
-using Players_and_Monsters.Models.Players.Contracts;
-
-namespace Players_and_Monsters.Models.BattleFields
+﻿namespace PlayersAndMonsters.Models.BattleFields
 {
+    using System;
+    using System.Linq;
+
+    using Common;
+    using Contracts;
+    using Cards.Contracts;
+    using Players;
+    using Players.Contracts;
+
     public class BattleField : IBattleField
     {
         public void Fight(IPlayer attackPlayer, IPlayer enemyPlayer)
@@ -49,6 +50,7 @@ namespace Players_and_Monsters.Models.BattleFields
                 }
             }
         }
+
         private int GetDamagePoints(IPlayer player)
         {
             return player.CardRepository.Cards.Sum(card => card.DamagePoints);

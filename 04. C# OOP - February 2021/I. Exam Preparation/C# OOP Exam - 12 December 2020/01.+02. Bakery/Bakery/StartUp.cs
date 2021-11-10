@@ -1,7 +1,7 @@
 ﻿namespace Bakery
 {
-    using Bakery.Core;
-    using Bakery.Core.Contracts;
+    using Core;
+    using Core.Contracts;
 
     public class StartUp
     {

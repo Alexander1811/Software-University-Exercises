@@ -1,9 +1,10 @@
-﻿using System;
-using System.Linq;
-using WarCroft.Core.IO.Contracts;
-
-namespace WarCroft.Core
+﻿namespace WarCroft.Core
 {
+    using System;
+    using System.Linq;
+
+    using IO.Contracts;
+
     public class Engine
     {
         private readonly IReader reader;

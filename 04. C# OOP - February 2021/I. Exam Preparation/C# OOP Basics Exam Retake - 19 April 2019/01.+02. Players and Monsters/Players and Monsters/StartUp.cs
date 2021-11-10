@@ -1,4 +1,4 @@
-﻿namespace Players_and_Monsters
+﻿namespace PlayersAndMonsters
 {
     using Core;
     using Core.Contracts;

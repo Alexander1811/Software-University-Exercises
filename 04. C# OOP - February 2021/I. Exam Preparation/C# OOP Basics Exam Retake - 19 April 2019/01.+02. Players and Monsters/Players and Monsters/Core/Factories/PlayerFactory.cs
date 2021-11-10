@@ -1,10 +1,10 @@
-﻿using Players_and_Monsters.Core.Factories.Contracts;
-using Players_and_Monsters.Models.Players;
-using Players_and_Monsters.Models.Players.Contracts;
-using Players_and_Monsters.Repositories;
-
-namespace Players_and_Monsters.Core.Factories
+﻿namespace PlayersAndMonsters.Core.Factories
 {
+    using Contracts;
+    using Models.Players;
+    using Models.Players.Contracts;
+    using Repositories;
+
     public class PlayerFactory : IPlayerFactory
     {
         public IPlayer CreatePlayer(string type, string username)
