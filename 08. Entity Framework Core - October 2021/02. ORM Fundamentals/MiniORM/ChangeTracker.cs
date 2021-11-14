@@ -1,12 +1,12 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace MiniORM
+﻿namespace MiniORM
 {
-	internal class ChangeTracker<T>
+    using System;
+    using System.Linq;
+    using System.Reflection;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
+    internal class ChangeTracker<T>
         where T : class, new()
     {
         private readonly List<T> allEntities;
@@ -23,14 +23,11 @@ namespace MiniORM
             this.allEntities = CloneEntities(entities);
         }
 
-        public IReadOnlyCollection<T> AllEntities => 
-            this.allEntities.AsReadOnly();
+        public IReadOnlyCollection<T> AllEntities => this.allEntities.AsReadOnly();
 
-        public IReadOnlyCollection<T> Added =>
-            this.added.AsReadOnly();
-
-        public IReadOnlyCollection<T> Removed =>
-            this.removed.AsReadOnly();
+        public IReadOnlyCollection<T> Added => this.added.AsReadOnly();
+        
+        public IReadOnlyCollection<T> Removed => this.removed.AsReadOnly();
 
         public void Add(T item)
         {
@@ -57,12 +54,8 @@ namespace MiniORM
 
                 T entity = dbSet
                     .Entities
-                    .Single(e => GetPrimaryKeyValues(primaryKeys, e)
-                                .SequenceEqual(primaryKeyValues));
+                    .Single(e => GetPrimaryKeyValues(primaryKeys, e).SequenceEqual(primaryKeyValues));
 
-                //TODO: May be swapped
-                //Here first one is proxy, second is original
-                //In method args first is original, second is proxy
                 bool isModified = IsModified(proxyEntity, entity);
 
                 if (isModified)
@@ -76,8 +69,7 @@ namespace MiniORM
 
         private static IEnumerable<object> GetPrimaryKeyValues(IEnumerable<PropertyInfo> primaryKeys, T entity)
         {
-            return primaryKeys
-                .Select(pk => pk.GetValue(entity));
+            return primaryKeys.Select(pk => pk.GetValue(entity));
         }
 
         private static bool IsModified(T entity, T proxyEntity)
@@ -87,14 +79,13 @@ namespace MiniORM
                 .Where(pi => DbContext.AllowedSqlTypes.Contains(pi.PropertyType));
 
             PropertyInfo[] modifiedProperties = monitoredProperties
-                .Where(pi =>
-                !Equals(pi.GetValue(entity), pi.GetValue(proxyEntity)))
+                .Where(pi => !Equals(pi.GetValue(entity), pi.GetValue(proxyEntity)))
                 .ToArray();
 
             bool isModified = modifiedProperties.Any();
 
             return isModified;
-        }  
+        }
 
         private static List<T> CloneEntities(IEnumerable<T> entities)
         {

@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Collections;
-using System.Collections.Generic;
-
-namespace MiniORM
+﻿namespace MiniORM
 {
-	public class DbSet<TEntity> : ICollection<TEntity>
+    using System;
+    using System.Linq;
+    using System.Collections;
+    using System.Collections.Generic;
+
+    public class DbSet<TEntity> : ICollection<TEntity>
         where TEntity : class, new()
     {
         internal DbSet(IEnumerable<TEntity> entities)

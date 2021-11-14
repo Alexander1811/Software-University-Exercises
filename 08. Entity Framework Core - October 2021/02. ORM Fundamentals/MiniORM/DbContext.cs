@@ -1,15 +1,15 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using System.Collections;
-using System.Data.SqlClient;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace MiniORM
+﻿namespace MiniORM
 {
-	public abstract class DbContext
+    using System;
+    using System.Linq;
+    using System.Reflection;
+    using System.Collections;
+    using System.Data.SqlClient;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    public abstract class DbContext
     {
         private readonly DatabaseConnection connection;
 
@@ -71,7 +71,7 @@ namespace MiniORM
                             .First();
 
                         MethodInfo persistMethod = typeof(DbContext)
-                            .GetMethod("Persist", BindingFlags.Instance |                   BindingFlags.NonPublic)
+                            .GetMethod("Persist", BindingFlags.Instance | BindingFlags.NonPublic)
                             .MakeGenericMethod(dbSetType);
 
                         try
@@ -216,8 +216,8 @@ namespace MiniORM
                 primaryKey = collectionType
                     .GetProperties()
                     .First(pi => collectionType
-                                 .GetProperty                                   (pi.GetCustomAttribute<ForeignKeyAttribute>().Name)
-                                    .PropertyType == entityType);
+                        .GetProperty(pi.GetCustomAttribute<ForeignKeyAttribute>().Name)
+                            .PropertyType == entityType);
             }
 
             DbSet<TCollection> navigationDbSet = (DbSet<TCollection>)
@@ -229,9 +229,7 @@ namespace MiniORM
                 Object primaryKeyValue = foreignKey.GetValue(entity);
 
                 TCollection[] navigationEntities = navigationDbSet
-                    .Where(ne => primaryKey
-                                .GetValue(ne)
-                                .Equals(primaryKeyValue))
+                    .Where(ne => primaryKey.GetValue(ne).Equals(primaryKeyValue))
                     .ToArray();
 
                 ReflectionHelper
@@ -257,7 +255,7 @@ namespace MiniORM
                 PropertyInfo navigationProperty = entityType
                     .GetProperty(navigationPropertyName);
 
-                Object navigationDbSet = 
+                Object navigationDbSet =
                     this.dbSetProperties[navigationProperty.PropertyType]
                     .GetValue(this);
 
@@ -268,17 +266,15 @@ namespace MiniORM
 
                 foreach (TEntity entity in dbSet)
                 {
-                    Object foreignKeyValue = foreignKey
-                        .GetValue(entity);
+                    Object foreignKeyValue = foreignKey.GetValue(entity);
 
                     Object navigationPropertyValue =
                         ((IEnumerable<object>)navigationDbSet)
                         .First(cnp => navigationPrimaryKey
-                                    .GetValue(cnp)
-                                    .Equals(foreignKeyValue));
+                            .GetValue(cnp)
+                            .Equals(foreignKeyValue));
 
-                    navigationProperty
-                        .SetValue(entity, navigationPropertyValue);
+                    navigationProperty.SetValue(entity, navigationPropertyValue);
                 }
             }
         }
@@ -286,11 +282,9 @@ namespace MiniORM
         private static bool IsObjectValid(object e)
         {
             ValidationContext validationContext = new ValidationContext(e);
-            List<ValidationResult> validationErrors = 
-                new List<ValidationResult>();
+            List<ValidationResult> validationErrors = new List<ValidationResult>();
 
-            Boolean validationResult = Validator
-                .TryValidateObject(e, validationContext, validationErrors, true);
+            Boolean validationResult = Validator.TryValidateObject(e, validationContext, validationErrors, true);
 
             return validationResult;
         }
@@ -328,8 +322,9 @@ namespace MiniORM
             var dbSets = this.GetType()
                 .GetProperties()
                 .Where(pi => pi.PropertyType
-                              .GetGenericTypeDefinition() == typeof(DbSet<>))
-                .ToDictionary(pi => pi.PropertyType.GetGenericArguments().First(), pi => pi);
+                    .GetGenericTypeDefinition() == typeof(DbSet<>))
+                .ToDictionary(pi => pi.PropertyType
+                    .GetGenericArguments().First(), pi => pi);
 
             return dbSets;
         }
@@ -342,8 +337,8 @@ namespace MiniORM
 
             string[] columns = table.GetProperties()
                 .Where(pi => dbColumns.Contains(pi.Name) &&
-                             !pi.HasAttribute<NotMappedAttribute>() &&
-                             AllowedSqlTypes.Contains(pi.PropertyType))
+                    !pi.HasAttribute<NotMappedAttribute>() &&
+                    AllowedSqlTypes.Contains(pi.PropertyType))
                 .Select(pi => pi.Name)
                 .ToArray();
 

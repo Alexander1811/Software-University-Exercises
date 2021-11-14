@@ -1,23 +1,21 @@
-﻿using System;
-using System.Linq;
-using MiniORM.App.Data;
-using MiniORM.App.Data.Entities;
-
-namespace MiniORM.App
+﻿namespace MiniORM.App
 {
-    class StartUp
+    using System.Linq;
+
+    using MiniORM.App.Data;
+    using MiniORM.App.Data.Entities;
+
+    public class StartUp
     {
         static void Main(string[] args)
         {
-            string connectionString = "Server=DESKTOP-F0IMF0D\\SQLEXPRESS;" +
-                "Database=MiniORM;" +
-                "Integrated Security=true";
+            string connectionString = @"Server=PC\SQLEXPRESS;Database=MiniORM;Integrated Security=True";
 
             SoftUniDbContext context = new SoftUniDbContext(connectionString);
 
             context.Employees.Add(new Employee
             {
-                FirstName = "Gosho",
+                FirstName = "John",
                 LastName = "Inserted",
                 DepartmentId = context.Departments.First().Id,
                 IsEmployed = true
