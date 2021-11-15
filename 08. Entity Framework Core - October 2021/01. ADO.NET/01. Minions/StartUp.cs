@@ -1,4 +1,4 @@
-﻿namespace P01_Minions
+﻿namespace Minions
 {
     using System;
     using System.Collections.Generic;
@@ -43,7 +43,7 @@
             //await IncreaseMinionAgeAndCapitalizeNameProcedure(connection);
         }
 
-        private static async Task CreateDatabaseAsync(string databaseName)
+        public static async Task CreateDatabaseAsync(string databaseName)
         {
             SqlConnection connection = new SqlConnection(Configuration.ConnectionStringMaster);
 
@@ -70,7 +70,7 @@
             }
         }
 
-        private static async Task PopulateMinionsDBAsync(SqlConnection connection)
+        public static async Task PopulateMinionsDBAsync(SqlConnection connection)
         {
             await using (connection)
             {
@@ -92,7 +92,7 @@
             }
         }
 
-        private static async Task PrintVillainNamesWithMoreThan3MinionsAsync(SqlConnection connection)
+        public static async Task PrintVillainNamesWithMoreThan3MinionsAsync(SqlConnection connection)
         {
             SqlCommand getVillainsCommand = new SqlCommand(Queries.VillainsGetWithMoreThan3Minions, connection);
 
@@ -110,7 +110,7 @@
             }
         }
 
-        private static async Task PrintMinionsNamesWithVillainIdAsync(SqlConnection connection)
+        public static async Task PrintMinionsNamesWithVillainIdAsync(SqlConnection connection)
         {
             int villainId = int.Parse(Console.ReadLine());
 
@@ -153,7 +153,7 @@
             }
         }
 
-        private static async Task AddMinionAsync(SqlConnection connection)
+        public static async Task AddMinionAsync(SqlConnection connection)
         {
             Console.WriteLine("Enter minion info: ");
             string[] minionInfo = Console
@@ -247,7 +247,7 @@
             Console.WriteLine($"Successfully added {minionName} to be minion of {villainName}.");
         }
 
-        private static async Task ChangeTownNamesCasingAsync(SqlConnection connection)
+        public static async Task ChangeTownNamesCasingAsync(SqlConnection connection)
         {
             string countryName = Console.ReadLine();
 
@@ -281,7 +281,7 @@
             Console.WriteLine($"[{string.Join(", ", updatedTownNames)}]");
         }
 
-        private static async Task RemoveVillainAsync(SqlConnection connection)
+        public static async Task RemoveVillainAsync(SqlConnection connection)
         {
             int villainId = int.Parse(Console.ReadLine());
 
@@ -312,7 +312,7 @@
             Console.WriteLine($"{rowsAffected} minions were released.");
         }
 
-        private static async Task PrintAllMinionNamesAsync(SqlConnection connection)
+        public static async Task PrintAllMinionNamesAsync(SqlConnection connection)
         {
             List<string> sortedMinionNames = new List<string>();
 
@@ -354,7 +354,7 @@
             return result;
         }
 
-        private static async Task IncreaseMinionAgeAndCapitalizeName(SqlConnection connection)
+        public static async Task IncreaseMinionAgeAndCapitalizeName(SqlConnection connection)
         {
             List<string> minionsNamesAges = new List<string>();
 
@@ -390,7 +390,7 @@
             Console.WriteLine(string.Join(Environment.NewLine, minionsNamesAges));
         }
 
-        private static async Task IncreaseMinionAgeAndCapitalizeNameProcedure(SqlConnection connection)
+        public static async Task IncreaseMinionAgeAndCapitalizeNameProcedure(SqlConnection connection)
         {
             string minionNameAge = string.Empty;
 

@@ -1,4 +1,4 @@
-﻿namespace P01_Minions
+﻿namespace Minions
 {
     public static class Queries
     {
