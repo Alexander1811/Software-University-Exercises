@@ -62,11 +62,11 @@
 
                 await createDbCommand.ExecuteNonQueryAsync();
 
-                Console.WriteLine("Database {0} was created.", databaseName);
+                Console.WriteLine("{0} database created successfully.", databaseName);
             }
             else
             {
-                Console.WriteLine("Database {0} has already been created.", databaseName);
+                Console.WriteLine("{0} database already been created.", databaseName);
             }
         }
 
@@ -88,7 +88,7 @@
                     await insertValuesCommand.ExecuteNonQueryAsync();
                 }
 
-                Console.WriteLine("Database MinionsDB was populated with data.");
+                Console.WriteLine("MinionsDB database populated with data successfully.");
             }
         }
 

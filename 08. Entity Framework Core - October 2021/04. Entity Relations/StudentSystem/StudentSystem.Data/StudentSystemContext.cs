@@ -39,9 +39,9 @@
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<StudentCourse>(x =>
+            modelBuilder.Entity<StudentCourse>(e =>
             {
-                x.HasKey(x => new { x.CourseId, x.StudentId });
+                e.HasKey(sc => new { sc.CourseId, sc.StudentId });
             });
         }
     }

@@ -54,7 +54,7 @@
                 result.AppendLine($"{e.FirstName} {e.LastName} {e.MiddleName} {e.JobTitle} {e.Salary:f2}");
             }
 
-            return result.ToString().TrimEnd();
+            return result.ToString().Trim();
         }
 
         public static string GetEmployeesWithSalaryOver50000(SoftUniContext context)
@@ -77,7 +77,7 @@
                 result.AppendLine($"{e.FirstName} - {e.Salary:f2}");
             }
 
-            return result.ToString().TrimEnd();
+            return result.ToString().Trim();
         }
 
         public static string GetEmployeesFromResearchAndDevelopment(SoftUniContext context)
@@ -103,7 +103,7 @@
                 result.AppendLine($"{e.FirstName} {e.LastName} from {e.DepartmentName} - {e.Salary:f2}");
             }
 
-            return result.ToString().TrimEnd();
+            return result.ToString().Trim();
         }
 
         public static string AddNewAddressToEmployee(SoftUniContext context)
@@ -139,7 +139,7 @@
                 result.AppendLine(a.AddressText);
             }
 
-            return result.ToString().TrimEnd();
+            return result.ToString().Trim();
         }
 
         public static string GetEmployeesInPeriod(SoftUniContext context)
@@ -161,9 +161,9 @@
                         .Select(ep => new
                         {
                             ProjectName = ep.Project.Name,
-                            StartDate = ep.Project.StartDate.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture).TrimEnd(),
+                            StartDate = ep.Project.StartDate.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture).Trim(),
                             EndDate = ep.Project.EndDate.HasValue
-                                ? ep.Project.EndDate.Value.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture).TrimEnd()
+                                ? ep.Project.EndDate.Value.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture).Trim()
                                 : "not finished"
                         })
                         .ToArray()
@@ -180,7 +180,7 @@
                 }
             }
 
-            return result.ToString().TrimEnd();
+            return result.ToString().Trim();
         }
 
         public static string GetAddressesByTown(SoftUniContext context)
@@ -206,7 +206,7 @@
                 result.AppendLine($"{a.AddressText}, {a.TownName} - {a.EmployeeCount} employees");
             }
 
-            return result.ToString().TrimEnd();
+            return result.ToString().Trim();
         }
 
         public static string GetEmployee147(SoftUniContext context)
@@ -237,7 +237,7 @@
                 result.AppendLine(p.Name);
             }
 
-            return result.ToString().TrimEnd();
+            return result.ToString().Trim();
         }
 
         public static string GetDepartmentsWithMoreThan5Employees(SoftUniContext context)
@@ -276,7 +276,7 @@
                 }
             }
 
-            return result.ToString().TrimEnd();
+            return result.ToString().Trim();
         }
 
         public static string GetLatestProjects(SoftUniContext context)
@@ -292,7 +292,7 @@
                 {
                     p.Name,
                     p.Description,
-                    StartDate = p.StartDate.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture).TrimEnd()
+                    StartDate = p.StartDate.ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture).Trim()
                 })
                 .ToArray();
 
@@ -303,7 +303,7 @@
                 result.AppendLine($"{p.StartDate}");
             }
 
-            return result.ToString().TrimEnd();
+            return result.ToString().Trim();
         }
 
         public static string IncreaseSalaries(SoftUniContext context)
@@ -340,7 +340,7 @@
                 result.AppendLine($"{e.FirstName} {e.LastName} (${e.Salary:f2})");
             }
 
-            return result.ToString().TrimEnd();
+            return result.ToString().Trim();
         }
 
         public static string GetEmployeesByFirstNameStartingWithSa(SoftUniContext context)
@@ -366,7 +366,7 @@
                 result.AppendLine($"{e.FirstName} {e.LastName} - {e.JobTitle} - (${e.Salary:f2})");
             }
 
-            return result.ToString().TrimEnd();
+            return result.ToString().Trim();
         }
 
         public static string DeleteProjectById(SoftUniContext context)
@@ -401,7 +401,7 @@
                 result.AppendLine(p.Name);
             }
 
-            return result.ToString().TrimEnd();
+            return result.ToString().Trim();
         }
 
         public static string RemoveTown(SoftUniContext context)

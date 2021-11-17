@@ -10,11 +10,11 @@
         {
             FootballBettingContext context = new FootballBettingContext();
 
+            context.Database.EnsureDeleted();
+
             context.Database.EnsureCreated();
 
-            Console.WriteLine("Database created.");
-
-            context.Database.EnsureDeleted();
+            Console.WriteLine("FootballBetting database created successfully.");
         }
     }
 }

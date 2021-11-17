@@ -10,11 +10,11 @@
         {
             StudentSystemContext context = new StudentSystemContext();
 
+            context.Database.EnsureDeleted();
+
             context.Database.EnsureCreated();
 
-            Console.WriteLine("Database created.");
-
-            context.Database.EnsureDeleted();
+            Console.WriteLine("StudentSystem database created successfully.");
         }
     }
 }
