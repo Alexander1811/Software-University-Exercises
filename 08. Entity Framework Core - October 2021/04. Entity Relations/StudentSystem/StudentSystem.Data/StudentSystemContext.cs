@@ -6,14 +6,10 @@
 
     public class StudentSystemContext : DbContext
     {
-        public StudentSystemContext()
-        {
-        }
+        public StudentSystemContext() { }
 
         public StudentSystemContext(DbContextOptions<StudentSystemContext> options)
-            : base(options)
-        {
-        }
+            : base(options) { }
 
         public virtual DbSet<Student> Students { get; set; }
 

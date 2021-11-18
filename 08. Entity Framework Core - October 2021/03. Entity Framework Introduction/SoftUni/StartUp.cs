@@ -45,13 +45,13 @@
                     e.LastName,
                     e.MiddleName,
                     e.JobTitle,
-                    e.Salary
+                    Salary = e.Salary.ToString("f2")
                 })
                 .ToArray();
 
             foreach (var e in employees)
             {
-                result.AppendLine($"{e.FirstName} {e.LastName} {e.MiddleName} {e.JobTitle} {e.Salary:f2}");
+                result.AppendLine($"{e.FirstName} {e.LastName} {e.MiddleName} {e.JobTitle} {e.Salary}");
             }
 
             return result.ToString().Trim();
@@ -68,13 +68,13 @@
                 .Select(e => new
                 {
                     e.FirstName,
-                    e.Salary
+                    Salary = e.Salary.ToString("f2")
                 })
                 .ToArray();
 
             foreach (var e in employees)
             {
-                result.AppendLine($"{e.FirstName} - {e.Salary:f2}");
+                result.AppendLine($"{e.FirstName} - {e.Salary}");
             }
 
             return result.ToString().Trim();
@@ -94,13 +94,13 @@
                     e.FirstName,
                     e.LastName,
                     DepartmentName = e.Department.Name,
-                    e.Salary
+                    Salary = e.Salary.ToString("f2")
                 })
                 .ToArray();
 
             foreach (var e in employees)
             {
-                result.AppendLine($"{e.FirstName} {e.LastName} from {e.DepartmentName} - {e.Salary:f2}");
+                result.AppendLine($"{e.FirstName} {e.LastName} from {e.DepartmentName} - {e.Salary}");
             }
 
             return result.ToString().Trim();
@@ -221,7 +221,8 @@
                     e.FirstName,
                     e.LastName,
                     e.JobTitle,
-                    Projects = e.EmployeesProjects
+                    Projects = e
+                        .EmployeesProjects
                         .OrderBy(ep => ep.Project.Name)
                         .Select(ep => new
                         {
@@ -329,7 +330,7 @@
                 {
                     e.FirstName,
                     e.LastName,
-                    e.Salary
+                    Salary = e.Salary.ToString("f2")
                 })
                 .ToArray();
 
@@ -337,7 +338,7 @@
 
             foreach (var e in employees)
             {
-                result.AppendLine($"{e.FirstName} {e.LastName} (${e.Salary:f2})");
+                result.AppendLine($"{e.FirstName} {e.LastName} (${e.Salary})");
             }
 
             return result.ToString().Trim();
@@ -357,13 +358,13 @@
                     e.FirstName,
                     e.LastName,
                     e.JobTitle,
-                    e.Salary
+                    Salary = e.Salary.ToString("f2")
                 })
                 .ToArray();
 
             foreach (var e in employees)
             {
-                result.AppendLine($"{e.FirstName} {e.LastName} - {e.JobTitle} - (${e.Salary:f2})");
+                result.AppendLine($"{e.FirstName} {e.LastName} - {e.JobTitle} - (${e.Salary})");
             }
 
             return result.ToString().Trim();
@@ -390,10 +391,7 @@
             var projects = context
                 .Projects
                 .Take(10)
-                .Select(p => new
-                {
-                    p.Name
-                })
+                .Select(p => new { p.Name })
                 .ToArray();
 
             foreach (var p in projects)

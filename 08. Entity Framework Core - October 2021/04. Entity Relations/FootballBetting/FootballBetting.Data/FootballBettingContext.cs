@@ -8,14 +8,10 @@
 
     public class FootballBettingContext : DbContext
     {
-        public FootballBettingContext()
-        {
-        }
+        public FootballBettingContext() { }
 
-        public FootballBettingContext([NotNull] DbContextOptions options)
-            : base(options)
-        {
-        }
+        public FootballBettingContext(DbContextOptions options)
+            : base(options) { }
 
         public virtual DbSet<Team> Teams { get; set; }
 

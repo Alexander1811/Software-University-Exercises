@@ -16,9 +16,9 @@
 
             DbInitializer.ResetDatabase(context);
 
-            string result;
+            string result = string.Empty;
             //result = ExportAlbumsInfo(context, 9);
-            //result = ExportSongsAboveDuration(context, 4);
+            result = ExportSongsAboveDuration(context, 4);
 
             Console.WriteLine(result);
         }
@@ -84,7 +84,7 @@
             var songs = context
                 .Songs
                 .ToArray()
-                .Where(s => s.Duration > TimeSpan.FromSeconds(duration))            
+                .Where(s => s.Duration.TotalSeconds > duration)            
                 .Select(s => new
                 {
                     s.Name,

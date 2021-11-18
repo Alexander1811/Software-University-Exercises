@@ -6,14 +6,10 @@
 
     public partial class SoftUniContext : DbContext
     {
-        public SoftUniContext()
-        {
-        }
+        public SoftUniContext() { }
 
         public SoftUniContext(DbContextOptions<SoftUniContext> options)
-            : base(options)
-        {
-        }
+            : base(options) { }
 
         public virtual DbSet<Address> Addresses { get; set; }
 
