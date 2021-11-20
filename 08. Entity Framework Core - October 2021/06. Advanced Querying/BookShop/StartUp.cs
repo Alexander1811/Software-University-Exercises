@@ -31,7 +31,6 @@
             //result = CountCopiesByAuthor(context);
             //result = GetTotalProfitByCategory(context);
             //result = GetMostRecentBooks(context);
-            //result = GetMostRecentBooks(context);
             //IncreasePrices(context);
             //result = RemoveBooks(context).ToString();
 
@@ -91,13 +90,13 @@
                 .Select(b => new
                 {
                     b.Title,
-                    Price = b.Price.ToString("f2")
+                    b.Price
                 })
                 .ToArray();
 
             foreach (var b in books)
             {
-                result.AppendLine($"{b.Title} - ${b.Price}");
+                result.AppendLine($"{b.Title} - ${b.Price:f2}");
             }
 
             return result.ToString().Trim();
@@ -172,13 +171,13 @@
                 {
                     b.Title,
                     b.EditionType,
-                    Price = b.Price.ToString("f2")
+                    b.Price
                 })
                 .ToArray();
 
             foreach (var b in books)
             {
-                result.AppendLine($"{b.Title} - {b.EditionType} - ${b.Price}");
+                result.AppendLine($"{b.Title} - {b.EditionType} - ${b.Price:f2}");
             }
 
             return result.ToString().Trim();
@@ -293,7 +292,7 @@
                 .Select(c => new
                 {
                     c.Name,
-                    Profit = c.CategoryBooks.Sum(cb => cb.Book.Copies * cb.Book.Price).ToString("f2")
+                    Profit = c.CategoryBooks.Sum(cb => cb.Book.Copies * cb.Book.Price)
                 })
                 .OrderByDescending(a => a.Profit)
                 .ToArray();

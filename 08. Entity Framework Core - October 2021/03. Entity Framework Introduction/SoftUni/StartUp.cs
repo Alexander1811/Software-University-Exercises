@@ -45,13 +45,13 @@
                     e.LastName,
                     e.MiddleName,
                     e.JobTitle,
-                    Salary = e.Salary.ToString("f2")
+                    e.Salary
                 })
                 .ToArray();
 
             foreach (var e in employees)
             {
-                result.AppendLine($"{e.FirstName} {e.LastName} {e.MiddleName} {e.JobTitle} {e.Salary}");
+                result.AppendLine($"{e.FirstName} {e.LastName} {e.MiddleName} {e.JobTitle} {e.Salary:f2}");
             }
 
             return result.ToString().Trim();
@@ -68,13 +68,13 @@
                 .Select(e => new
                 {
                     e.FirstName,
-                    Salary = e.Salary.ToString("f2")
+                    e.Salary
                 })
                 .ToArray();
 
             foreach (var e in employees)
             {
-                result.AppendLine($"{e.FirstName} - {e.Salary}");
+                result.AppendLine($"{e.FirstName} - {e.Salary:f2}");
             }
 
             return result.ToString().Trim();
@@ -94,13 +94,13 @@
                     e.FirstName,
                     e.LastName,
                     DepartmentName = e.Department.Name,
-                    Salary = e.Salary.ToString("f2")
+                    e.Salary
                 })
                 .ToArray();
 
             foreach (var e in employees)
             {
-                result.AppendLine($"{e.FirstName} {e.LastName} from {e.DepartmentName} - {e.Salary}");
+                result.AppendLine($"{e.FirstName} {e.LastName} from {e.DepartmentName} - {e.Salary:f2}");
             }
 
             return result.ToString().Trim();
@@ -330,7 +330,7 @@
                 {
                     e.FirstName,
                     e.LastName,
-                    Salary = e.Salary.ToString("f2")
+                    e.Salary
                 })
                 .ToArray();
 
@@ -338,7 +338,7 @@
 
             foreach (var e in employees)
             {
-                result.AppendLine($"{e.FirstName} {e.LastName} (${e.Salary})");
+                result.AppendLine($"{e.FirstName} {e.LastName} (${e.Salary:f2})");
             }
 
             return result.ToString().Trim();
@@ -358,13 +358,13 @@
                     e.FirstName,
                     e.LastName,
                     e.JobTitle,
-                    Salary = e.Salary.ToString("f2")
+                    e.Salary
                 })
                 .ToArray();
 
             foreach (var e in employees)
             {
-                result.AppendLine($"{e.FirstName} {e.LastName} - {e.JobTitle} - (${e.Salary})");
+                result.AppendLine($"{e.FirstName} {e.LastName} - {e.JobTitle} - (${e.Salary:f2})");
             }
 
             return result.ToString().Trim();
