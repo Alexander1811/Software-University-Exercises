@@ -33,16 +33,14 @@
 
         public ICollection<ListAllPositionsDto> All()
         {
-            return this.context
-                .Positions
+            return this.context.Positions
                 .ProjectTo<ListAllPositionsDto>(this.mapper.ConfigurationProvider)
                 .ToList();
         }
 
         public ICollection<EmployeeRegisterPositionsAvailable> GetPositionsAvailables()
         {
-            return this.context
-                .Positions
+            return this.context.Positions
                 .ProjectTo<EmployeeRegisterPositionsAvailable>(this.mapper.ConfigurationProvider)
                 .ToList();
         }

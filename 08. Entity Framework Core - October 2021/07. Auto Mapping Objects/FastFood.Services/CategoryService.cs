@@ -33,16 +33,14 @@
 
         public ICollection<ListAllCategoriesDto> All()
         {
-            return this.context
-                .Categories
+            return this.context.Categories
                 .ProjectTo<ListAllCategoriesDto>(this.mapper.ConfigurationProvider)
                 .ToList();
         }
 
         public ICollection<ItemCreateCategoriesAvailable> GetCategoriesAvailable()
         {
-            return this.context
-                .Categories
+            return this.context.Categories
                 .ProjectTo<ItemCreateCategoriesAvailable>(this.mapper.ConfigurationProvider)
                 .ToList();
         }

@@ -43,8 +43,7 @@
 
             AgeRestriction ageRestriction = Enum.Parse<AgeRestriction>(command, true);
 
-            var books = context
-                .Books
+            var books = context.Books
                 .ToArray()
                 .Where(b => b.AgeRestriction.ToString().ToLower() == ageRestriction.ToString().ToLower())
                 .OrderBy(b => b.Title)
@@ -63,8 +62,7 @@
         {
             StringBuilder result = new StringBuilder();
 
-            var books = context
-                .Books
+            var books = context.Books
                 .Where(b => b.Copies < 5000
                     && b.EditionType == EditionType.Gold)
                 .OrderBy(b => b.BookId)
@@ -83,8 +81,7 @@
         {
             StringBuilder result = new StringBuilder();
 
-            var books = context
-                .Books
+            var books = context.Books
                 .Where(b => b.Price > 40m)
                 .OrderByDescending(b => b.Price)
                 .Select(b => new
@@ -106,8 +103,7 @@
         {
             StringBuilder result = new StringBuilder();
 
-            var books = context
-                .Books
+            var books = context.Books
                 .Where(b => b.ReleaseDate.HasValue
                     && b.ReleaseDate.Value.Year != year)
                 .OrderBy(b => b.BookId)
@@ -135,8 +131,7 @@
 
             foreach (var category in categories)
             {
-                var currentBooksByCategory = context
-                    .Books
+                var currentBooksByCategory = contexts.Books
                     .Where(b => b.BookCategories.Any(bc => bc.Category.Name.ToLower() == category))
                     .Select(b => b.Title)
                     .ToList();
@@ -162,8 +157,7 @@
 
             DateTime releaseDate = DateTime.ParseExact(date, "dd-MM-yyyy", CultureInfo.InvariantCulture);
 
-            var books = context
-                .Books
+            var books = context.Books
                 .Where(b => b.ReleaseDate.HasValue
                     && b.ReleaseDate.Value < releaseDate)
                 .OrderByDescending(b => b.ReleaseDate)
@@ -187,8 +181,7 @@
         {
             StringBuilder result = new StringBuilder();
 
-            var authors = context
-                .Authors
+            var authors = context.Authors
                 .ToArray()
                 .Where(a => a.FirstName.EndsWith(input))
                 .Select(a => new
@@ -210,8 +203,7 @@
         {
             StringBuilder result = new StringBuilder();
 
-            var books = context
-                .Books
+            var books = context.Books
                 .OrderBy(b => b.Title)
                 .Where(b => b.Title.ToLower()
                     .Contains(input.ToLower()))
@@ -230,8 +222,7 @@
         {
             StringBuilder result = new StringBuilder();
 
-            var books = context
-                .Books
+            var books = context.Books
                 .Where(b => b
                     .Author.LastName.ToLower()
                     .StartsWith(input.ToLower()))
@@ -253,8 +244,7 @@
 
         public static int CountBooks(BookShopContext context, int lengthCheck)
         {
-            int booksCount = context
-                .Books
+            int booksCount = context.Books
                 .Where(b => b.Title.Length > lengthCheck)
                 .Count();
 
@@ -265,8 +255,7 @@
         {
             StringBuilder result = new StringBuilder();
 
-            var authors = context
-                .Authors
+            var authors = context.Authors
                 .Select(a => new
                 {
                     AuthorName = $"{a.FirstName} {a.LastName}",
@@ -287,8 +276,7 @@
         {
             StringBuilder result = new StringBuilder();
 
-            var categories = context
-                .Categories
+            var categories = context.Categories
                 .Select(c => new
                 {
                     c.Name,
@@ -309,8 +297,7 @@
         {
             StringBuilder result = new StringBuilder();
 
-            var categories = context
-                .Categories
+            var categories = context.Categories
                 .Select(c => new
                 {
                     c.Name,
@@ -345,8 +332,7 @@
 
         public static void IncreasePrices(BookShopContext context)
         {
-            var books = context
-                .Books
+            var books = context.Books
                 .Where(b => b.ReleaseDate.HasValue
                     && b.ReleaseDate.Value.Year < 2010);
 
@@ -360,12 +346,10 @@
 
         public static int RemoveBooks(BookShopContext context)
         {
-            var booksToDelete = context
-                .Books
+            var booksToDelete = context.Books
                 .Where(b => b.Copies < 4200);
 
-            var booksWithCategoriesToDelete = context
-                .BooksCategories
+            var booksWithCategoriesToDelete = context.BooksCategories
                 .Where(bc => booksToDelete.Select(b => b.BookId).Contains(bc.BookId));
 
             int booksCount = booksToDelete.Count();

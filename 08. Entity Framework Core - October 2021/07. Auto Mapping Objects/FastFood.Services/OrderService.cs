@@ -33,8 +33,7 @@
 
         public ICollection<ListAllOrdersDto> All()
         {
-            return this.context
-                .Orders
+            return this.context.Orders
                 .ProjectTo<ListAllOrdersDto>(this.mapper.ConfigurationProvider)
                 .ToList();
         }

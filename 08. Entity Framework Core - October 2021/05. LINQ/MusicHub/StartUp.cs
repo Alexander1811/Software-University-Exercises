@@ -27,8 +27,7 @@
         {
             StringBuilder result = new StringBuilder();
 
-            var albums = context
-                .Albums
+            var albums = context.Albums
                 .ToArray()
                 .Where(a => a.ProducerId == producerId)
                 .OrderByDescending(a => a.Price)
@@ -37,8 +36,7 @@
                     a.Name,
                     ReleaseDate = a.ReleaseDate.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture),
                     ProducerName = a.Producer.Name,
-                    Songs = a
-                        .Songs
+                    Songs = a.Songs
                         .OrderByDescending(s => s.Name)
                         .ThenBy(s => s.Writer.Name)
                         .Select(s => new
@@ -81,8 +79,7 @@
         {
             StringBuilder result = new StringBuilder();
 
-            var songs = context
-                .Songs
+            var songs = context.Songs
                 .ToArray()
                 .Where(s => s.Duration.TotalSeconds > duration)            
                 .Select(s => new
