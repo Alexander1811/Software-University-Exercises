@@ -1,8 +1,8 @@
-﻿namespace CarDealer.DTO.Input
+﻿namespace CarDealer.DTO.Import
 {
     using System.Collections.Generic;
 
-    public class CarInputDto
+    public class ImportCarDto
     {
         public string Make { get; set; }
 

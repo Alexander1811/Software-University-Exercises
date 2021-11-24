@@ -1,6 +1,6 @@
-﻿namespace ProductShop.DTO.Input
+﻿namespace ProductShop.DTO.Import
 {
-    public class UserInputDto
+    public class ImportUserDto
     {
         public string FirstName { get; set; }
         

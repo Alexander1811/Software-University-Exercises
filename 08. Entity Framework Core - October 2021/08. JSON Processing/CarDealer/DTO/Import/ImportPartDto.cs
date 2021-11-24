@@ -1,6 +1,6 @@
-﻿namespace CarDealer.DTO.Input
+﻿namespace CarDealer.DTO.Import
 {
-    public class PartInputDto
+    public class ImportPartDto
     {
         public string Name { get; set; }
 

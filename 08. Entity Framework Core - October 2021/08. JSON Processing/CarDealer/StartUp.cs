@@ -11,7 +11,7 @@
     using Newtonsoft.Json.Serialization;
 
     using Data;
-    using DTO.Input;
+    using DTO.Import;
     using Models;
 
     public class StartUp
@@ -56,7 +56,7 @@
         public static string ImportSuppliers(CarDealerContext context, string inputJson)
         {
             var suppliers = JsonConvert
-                .DeserializeObject<List<SupplierInputDto>>(inputJson);
+                .DeserializeObject<List<ImportSupplierDto>>(inputJson);
 
             InitializeMapper();
 
@@ -74,7 +74,7 @@
             var supplierIds = context.Suppliers.Select(s => s.Id);
 
             var parts = JsonConvert
-                .DeserializeObject<List<PartInputDto>>(inputJson)
+                .DeserializeObject<List<ImportPartDto>>(inputJson)
                 .Where(p => supplierIds.Contains(p.SupplierId));
 
             InitializeMapper();
@@ -91,7 +91,7 @@
         public static string ImportCars(CarDealerContext context, string inputJson)
         {
             var cars = JsonConvert
-                .DeserializeObject<List<CarInputDto>>(inputJson);
+                .DeserializeObject<List<ImportCarDto>>(inputJson);
 
             InitializeMapper();
 
@@ -99,7 +99,7 @@
 
             foreach (var c in cars)
             {
-                var car = mapper.Map<CarInputDto, Car>(c);
+                var car = mapper.Map<ImportCarDto, Car>(c);
 
                 mappedCars.Add(car);
 
@@ -127,7 +127,7 @@
         public static string ImportCustomers(CarDealerContext context, string inputJson)
         {
             var customers = JsonConvert
-                .DeserializeObject<List<CustomerInputDto>>(inputJson);
+                .DeserializeObject<List<ImportCustomerDto>>(inputJson);
 
             InitializeMapper();
 
@@ -143,7 +143,7 @@
         public static string ImportSales(CarDealerContext context, string inputJson)
         {
             var sales = JsonConvert
-                .DeserializeObject<List<SaleInputDto>>(inputJson);
+                .DeserializeObject<List<ImportSaleDto>>(inputJson);
 
             InitializeMapper();
 

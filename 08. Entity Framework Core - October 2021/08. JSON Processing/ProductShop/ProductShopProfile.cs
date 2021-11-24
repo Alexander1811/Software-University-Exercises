@@ -2,20 +2,20 @@
 {
     using AutoMapper;
 
-    using DTO.Input;
+    using DTO.Import;
     using Models;
 
     public class ProductShopProfile : Profile
     {
         public ProductShopProfile()
         {
-            this.CreateMap<UserInputDto, User>();
+            this.CreateMap<ImportUserDto, User>();
 
-            this.CreateMap<ProductInputDto, Product>();
+            this.CreateMap<ImportProductDto, Product>();
 
-            this.CreateMap<CategoryInputDto, Category>();
+            this.CreateMap<ImportCategoryDto, Category>();
 
-            this.CreateMap<CategoryProductInputDto, CategoryProduct>();
+            this.CreateMap<ImportCategoryProductDto, CategoryProduct>();
         }
     }
 }

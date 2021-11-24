@@ -10,7 +10,7 @@
     using Newtonsoft.Json.Serialization;
 
     using Data;
-    using DTO.Input;
+    using DTO.Import;
     using Models;
 
     public class StartUp
@@ -50,7 +50,7 @@
         public static string ImportUsers(ProductShopContext context, string inputJson)
         {
             var users = JsonConvert
-                .DeserializeObject<List<UserInputDto>>(inputJson);
+                .DeserializeObject<List<ImportUserDto>>(inputJson);
 
             InitializeMapper();
 
@@ -66,7 +66,7 @@
         public static string ImportProducts(ProductShopContext context, string inputJson)
         {
             var products = JsonConvert
-                .DeserializeObject<List<ProductInputDto>>(inputJson);
+                .DeserializeObject<List<ImportProductDto>>(inputJson);
 
             InitializeMapper();
 
@@ -82,7 +82,7 @@
         public static string ImportCategories(ProductShopContext context, string inputJson)
         {
             var categories = JsonConvert
-                .DeserializeObject<List<CategoryInputDto>>(inputJson)
+                .DeserializeObject<List<ImportCategoryDto>>(inputJson)
                 .Where(c => !string.IsNullOrEmpty(c.Name));
 
             InitializeMapper();
@@ -99,7 +99,7 @@
         public static string ImportCategoryProducts(ProductShopContext context, string inputJson)
         {
             var categoriesProducts = JsonConvert
-                .DeserializeObject<List<CategoryProductInputDto>>(inputJson);
+                .DeserializeObject<List<ImportCategoryProductDto>>(inputJson);
 
             InitializeMapper();
 
