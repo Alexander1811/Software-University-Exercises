@@ -1,7 +1,6 @@
 ﻿namespace ProductShop
 {
     using System;
-    using System.Collections.Generic;
     using System.IO;
     using System.Linq;
 
@@ -15,7 +14,10 @@
 
     public class StartUp
     {
-        private static IMapper mapper;
+        private static readonly IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+        {
+            cfg.AddProfile<ProductShopProfile>();
+        }));
 
         public static void Main(string[] args)
         {
@@ -33,13 +35,12 @@
             string categoriesProductsJsonString =
                 File.ReadAllText("../../../Datasets/categories-products.json");
 
+            string result = string.Empty;
             //Console.WriteLine(ImportUsers(context, usersJsonString));
             //Console.WriteLine(ImportProducts(context, productsJsonString));
             //Console.WriteLine(ImportCategories(context, categoriesJsonString));
             //Console.WriteLine(ImportCategoryProducts(context, categoriesProductsJsonString));
-
-            string result = string.Empty;
-            //result = GetProductsInRange(context);
+            result = GetProductsInRange(context);
             //result = GetSoldProducts(context);
             //result = GetCategoriesByProductsCount(context);
             //result = GetUsersWithProducts(context);
@@ -49,12 +50,10 @@
 
         public static string ImportUsers(ProductShopContext context, string inputJson)
         {
-            var users = JsonConvert
-                .DeserializeObject<List<ImportUserDto>>(inputJson);
+            var importUsers = JsonConvert
+                .DeserializeObject<ImportUserDto[]>(inputJson);
 
-            InitializeMapper();
-
-            var mappedUsers = mapper.Map<List<User>>(users);
+            var mappedUsers = mapper.Map<User[]>(importUsers);
 
             context.Users.AddRange(mappedUsers);
 
@@ -65,12 +64,10 @@
 
         public static string ImportProducts(ProductShopContext context, string inputJson)
         {
-            var products = JsonConvert
-                .DeserializeObject<List<ImportProductDto>>(inputJson);
+            var importProducts = JsonConvert
+                .DeserializeObject<ImportProductDto[]>(inputJson);
 
-            InitializeMapper();
-
-            var mappedProducts = mapper.Map<List<Product>>(products);
+            var mappedProducts = mapper.Map<Product[]>(importProducts);
 
             context.Products.AddRange(mappedProducts);
 
@@ -81,13 +78,11 @@
 
         public static string ImportCategories(ProductShopContext context, string inputJson)
         {
-            var categories = JsonConvert
-                .DeserializeObject<List<ImportCategoryDto>>(inputJson)
+            var importCategories = JsonConvert
+                .DeserializeObject<ImportCategoryDto[]>(inputJson)
                 .Where(c => !string.IsNullOrEmpty(c.Name));
 
-            InitializeMapper();
-
-            var mappedCategories = mapper.Map<List<Category>>(categories);
+            var mappedCategories = mapper.Map<Category[]>(importCategories);
 
             context.Categories.AddRange(mappedCategories);
 
@@ -98,12 +93,10 @@
 
         public static string ImportCategoryProducts(ProductShopContext context, string inputJson)
         {
-            var categoriesProducts = JsonConvert
-                .DeserializeObject<List<ImportCategoryProductDto>>(inputJson);
+            var importCategoriesProducts = JsonConvert
+                .DeserializeObject<ImportCategoryProductDto[]>(inputJson);
 
-            InitializeMapper();
-
-            var mappedCategoriesProducts = mapper.Map<List<CategoryProduct>>(categoriesProducts);
+            var mappedCategoriesProducts = mapper.Map<CategoryProduct[]>(importCategoriesProducts);
 
             context.CategoryProducts.AddRange(mappedCategoriesProducts);
 
@@ -126,9 +119,9 @@
                 })
                 .ToArray();
 
-            JsonSerializerSettings jsonSettings = GetJsonSettings(NullValueHandling.Include);
+            JsonSerializerSettings settings = GetSerializerSettings(NullValueHandling.Include);
 
-            string result = JsonConvert.SerializeObject(products, jsonSettings);
+            string result = JsonConvert.SerializeObject(products, settings);
 
             return result;
         }
@@ -155,9 +148,9 @@
                 })
                 .ToArray();
 
-            JsonSerializerSettings jsonSettings = GetJsonSettings(NullValueHandling.Include);
+            JsonSerializerSettings settings = GetSerializerSettings(NullValueHandling.Include);
 
-            string result = JsonConvert.SerializeObject(userWithProducts, jsonSettings);
+            string result = JsonConvert.SerializeObject(userWithProducts, settings);
 
             return result;
         }
@@ -176,9 +169,9 @@
                 })
                 .ToArray();
 
-            JsonSerializerSettings jsonSettings = GetJsonSettings(NullValueHandling.Include);
+            JsonSerializerSettings settings = GetSerializerSettings(NullValueHandling.Include);
 
-            string result = JsonConvert.SerializeObject(categories, jsonSettings);
+            string result = JsonConvert.SerializeObject(categories, settings);
 
             return result;
         }
@@ -213,22 +206,14 @@
                 Users = users
             };
 
-            JsonSerializerSettings jsonSettings = GetJsonSettings(NullValueHandling.Ignore);
+            JsonSerializerSettings settings = GetSerializerSettings(NullValueHandling.Ignore);
 
-            string result = JsonConvert.SerializeObject(usersCountAndProducts, jsonSettings);
+            string result = JsonConvert.SerializeObject(usersCountAndProducts, settings);
 
             return result;
         }
 
-        private static void InitializeMapper()
-        {
-            mapper = new Mapper(new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile<ProductShopProfile>();
-            }));
-        }
-
-        private static JsonSerializerSettings GetJsonSettings(NullValueHandling handling)
+        private static JsonSerializerSettings GetSerializerSettings(NullValueHandling handling)
         {
             return new JsonSerializerSettings
             {

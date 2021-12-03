@@ -1,6 +1,8 @@
 ﻿namespace TeisterMask.DataProcessor
 {
     using System;
+    using System.Globalization;
+    using System.IO;
     using System.Linq;
     using System.Text;
     using System.Xml.Serialization;
@@ -8,11 +10,9 @@
     using Newtonsoft.Json;
 
     using Data;
+    using ExportDto;
 
     using Formatting = Newtonsoft.Json.Formatting;
-    using TeisterMask.DataProcessor.ExportDto;
-    using System.IO;
-    using System.Globalization;
 
     public class Serializer
     {
@@ -88,6 +88,7 @@
 
             return result.TrimEnd();
         }
+
         private static XmlSerializer GetSerializer(string rootName, Type dtoType)
         {
             return new XmlSerializer(dtoType, new XmlRootAttribute(rootName));

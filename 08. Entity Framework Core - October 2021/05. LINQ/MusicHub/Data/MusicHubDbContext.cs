@@ -6,14 +6,10 @@
 
     public class MusicHubDbContext : DbContext
     {
-        public MusicHubDbContext()
-        {
-        }
+        public MusicHubDbContext() { }
 
         public MusicHubDbContext(DbContextOptions options)
-            : base(options)
-        {
-        }
+            : base(options) { }
 
         public virtual DbSet<Song> Songs { get; set; }
 

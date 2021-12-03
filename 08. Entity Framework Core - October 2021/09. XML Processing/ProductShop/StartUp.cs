@@ -9,9 +9,9 @@
     using AutoMapper;
 
     using Data;
+    using DTO.Export;
     using DTO.Import;
     using Models;
-    using ProductShop.DTO.Export;
 
     public class StartUp
     {

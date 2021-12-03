@@ -16,7 +16,10 @@
 
     public class StartUp
     {
-        private static IMapper mapper;
+        private static readonly IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+        {
+            cfg.AddProfile<CarDealerProfile>();
+        }));
 
         public static void Main(string[] args)
         {
@@ -36,13 +39,12 @@
             string salesJsonString =
                  File.ReadAllText("../../../Datasets/sales.json");
 
+            string result = string.Empty;
             //Console.WriteLine(ImportSuppliers(context, suppliersJsonString));
             //Console.WriteLine(ImportParts(context, partsJsonString));
             //Console.WriteLine(ImportCars(context, carsJsonString));
             //Console.WriteLine(ImportCustomers(context, customersJsonString));
             //Console.WriteLine(ImportSales(context, salesJsonString));
-
-            string result = string.Empty;
             //result = GetOrderedCustomers(context);
             //result = GetCarsFromMakeToyota(context);
             //result = GetLocalSuppliers(context);
@@ -55,12 +57,10 @@
 
         public static string ImportSuppliers(CarDealerContext context, string inputJson)
         {
-            var suppliers = JsonConvert
-                .DeserializeObject<List<ImportSupplierDto>>(inputJson);
+            var importSuppliers = JsonConvert
+                .DeserializeObject<ImportSupplierDto[]>(inputJson);
 
-            InitializeMapper();
-
-            var mappedSuppliers = mapper.Map<List<Supplier>>(suppliers);
+            var mappedSuppliers = mapper.Map<Supplier[]>(importSuppliers);
 
             context.Suppliers.AddRange(mappedSuppliers);
 
@@ -73,13 +73,11 @@
         {
             var supplierIds = context.Suppliers.Select(s => s.Id);
 
-            var parts = JsonConvert
-                .DeserializeObject<List<ImportPartDto>>(inputJson)
+            var importParts = JsonConvert
+                .DeserializeObject<ImportPartDto[]>(inputJson)
                 .Where(p => supplierIds.Contains(p.SupplierId));
 
-            InitializeMapper();
-
-            var mappedParts = mapper.Map<List<Part>>(parts);
+            var mappedParts = mapper.Map<Part[]>(importParts);
 
             context.Parts.AddRange(mappedParts);
 
@@ -90,32 +88,10 @@
 
         public static string ImportCars(CarDealerContext context, string inputJson)
         {
-            var cars = JsonConvert
-                .DeserializeObject<List<ImportCarDto>>(inputJson);
+            var importCars = JsonConvert
+                .DeserializeObject<ImportCarDto[]>(inputJson);
 
-            InitializeMapper();
-
-            var mappedCars = new List<Car>();
-
-            foreach (var c in cars)
-            {
-                var car = mapper.Map<ImportCarDto, Car>(c);
-
-                mappedCars.Add(car);
-
-                var partIds = c.PartsId
-                    .Distinct()
-                    .ToList();
-
-                if (partIds == null) { continue; }
-
-                partIds.ForEach(p =>
-                {
-                    var currentPair = new PartCar() { Car = car, PartId = p };
-
-                    car.PartCars.Add(currentPair);
-                });
-            }
+            var mappedCars = GetMappedCars(importCars);
 
             context.Cars.AddRange(mappedCars);
 
@@ -126,12 +102,10 @@
 
         public static string ImportCustomers(CarDealerContext context, string inputJson)
         {
-            var customers = JsonConvert
-                .DeserializeObject<List<ImportCustomerDto>>(inputJson);
+            var importCustomers = JsonConvert
+                .DeserializeObject<ImportCustomerDto[]>(inputJson);
 
-            InitializeMapper();
-
-            var mappedCustomers = mapper.Map<List<Customer>>(customers);
+            var mappedCustomers = mapper.Map<Customer[]>(importCustomers);
 
             context.Customers.AddRange(mappedCustomers);
 
@@ -142,12 +116,13 @@
 
         public static string ImportSales(CarDealerContext context, string inputJson)
         {
-            var sales = JsonConvert
-                .DeserializeObject<List<ImportSaleDto>>(inputJson);
+            var carIds = context.Cars.Select(c => c.Id);
 
-            InitializeMapper();
+            var importSales = JsonConvert
+                .DeserializeObject<ImportSaleDto[]>(inputJson)
+                .Where(s => carIds.Contains(s.CarId));
 
-            var mappedSales = mapper.Map<List<Sale>>(sales);
+            var mappedSales = mapper.Map<Sale[]>(importSales);
 
             context.Sales.AddRange(mappedSales);
 
@@ -169,9 +144,9 @@
                })
                .ToArray();
 
-            JsonSerializerSettings jsonSettings = GetJsonSettings();
+            JsonSerializerSettings settings = GetSerializerSettings();
 
-            string result = JsonConvert.SerializeObject(customers, jsonSettings);
+            string result = JsonConvert.SerializeObject(customers, settings);
 
             return result;
         }
@@ -191,9 +166,9 @@
                 })
                 .ToArray();
 
-            JsonSerializerSettings jsonSettings = GetJsonSettings();
+            JsonSerializerSettings settings = GetSerializerSettings();
 
-            string result = JsonConvert.SerializeObject(cars, jsonSettings);
+            string result = JsonConvert.SerializeObject(cars, settings);
 
             return result;
         }
@@ -210,9 +185,9 @@
                 })
                 .ToArray();
 
-            JsonSerializerSettings jsonSettings = GetJsonSettings();
+            JsonSerializerSettings settings = GetSerializerSettings();
 
-            string result = JsonConvert.SerializeObject(suppliers, jsonSettings);
+            string result = JsonConvert.SerializeObject(suppliers, settings);
 
             return result;
         }
@@ -238,9 +213,9 @@
                 })
                 .ToArray();
 
-            JsonSerializerSettings jsonSettings = GetJsonSettings();
+            JsonSerializerSettings settings = GetSerializerSettings();
 
-            string result = JsonConvert.SerializeObject(cars, jsonSettings);
+            string result = JsonConvert.SerializeObject(cars, settings);
 
             return result;
         }
@@ -253,21 +228,19 @@
                 {
                     FullName = c.Name,
                     BoughtCars = c.Sales.Count,
-                    SpentMoney = c.Sales
-                        .Sum(s => s.Car.PartCars
-                            .Sum(p => p.Part.Price))
+                    SpentMoney = c.Sales.Sum(s => s.Car.PartCars.Sum(p => p.Part.Price))
                 })
                 .OrderByDescending(c => c.SpentMoney)
                 .ThenByDescending(c => c.BoughtCars)
                 .ToArray();
 
-            JsonSerializerSettings jsonSettings = GetJsonSettings();
-            jsonSettings.ContractResolver = new DefaultContractResolver
+            JsonSerializerSettings settings = GetSerializerSettings();
+            settings.ContractResolver = new DefaultContractResolver
             {
                 NamingStrategy = new CamelCaseNamingStrategy()
             };
 
-            string result = JsonConvert.SerializeObject(customers, jsonSettings);
+            string result = JsonConvert.SerializeObject(customers, settings);
 
             return result;
         }
@@ -291,28 +264,47 @@
                 .Take(10)
                 .ToArray();
 
-            JsonSerializerSettings jsonSettings = GetJsonSettings();
+            JsonSerializerSettings settings = GetSerializerSettings();
 
-            string result = JsonConvert.SerializeObject(sales, jsonSettings);
+            string result = JsonConvert.SerializeObject(sales, settings);
 
             return result;
         }
 
-        private static void InitializeMapper()
-        {
-            mapper = new Mapper(new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile<CarDealerProfile>();
-            }));
-        }
-
-        private static JsonSerializerSettings GetJsonSettings()
+        private static JsonSerializerSettings GetSerializerSettings()
         {
             return new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Include,
                 Formatting = Formatting.Indented
             };
+        }
+
+        private static Car[] GetMappedCars(ImportCarDto[] importCars)
+        {
+            var mappedCars = new List<Car>();
+
+            foreach (var c in importCars)
+            {
+                var car = mapper.Map<ImportCarDto, Car>(c);
+
+                var partIds = c.PartsId
+                    .Distinct()
+                    .ToList();
+
+                if (partIds == null) { continue; }
+
+                partIds.ForEach(p =>
+                {
+                    var currentPair = new PartCar() { Car = car, PartId = p };
+
+                    car.PartCars.Add(currentPair);
+                });
+
+                mappedCars.Add(car);
+            }
+
+            return mappedCars.ToArray();
         }
     }
 }
