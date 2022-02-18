@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>P03_Guild</AssemblyName>
+    <RootNamespace>P03_Guild</RootNamespace>
+  </PropertyGroup>
+
+</Project>

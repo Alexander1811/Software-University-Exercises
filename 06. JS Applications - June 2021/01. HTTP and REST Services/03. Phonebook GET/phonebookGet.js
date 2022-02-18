@@ -1,0 +1,3 @@
+// HTTP request in Postman:
+// GET /jsonstore/phonebook HTTP/1.1
+// Host: localhost:3030 

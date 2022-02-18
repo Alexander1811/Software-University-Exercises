@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>P02_LineNumbers</RootNamespace>
+    <AssemblyName>P02_LineNumbers</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="text.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

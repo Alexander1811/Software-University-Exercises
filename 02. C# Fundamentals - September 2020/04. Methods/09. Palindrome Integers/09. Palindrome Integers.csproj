@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>P09_PalindromeIntegers</RootNamespace>
+    <AssemblyName>P09_PalindromeIntegers</AssemblyName>
+  </PropertyGroup>
+
+</Project>

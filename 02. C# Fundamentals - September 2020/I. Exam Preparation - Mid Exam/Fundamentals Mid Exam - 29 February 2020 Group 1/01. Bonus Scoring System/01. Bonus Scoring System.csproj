@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>P01_BonusScoringSystem</RootNamespace>
+    <AssemblyName>P01_BonusScoringSystem</AssemblyName>
+  </PropertyGroup>
+
+</Project>

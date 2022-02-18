@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>P04_Students</RootNamespace>
+    <AssemblyName>P04_Students</AssemblyName>
+  </PropertyGroup>
+
+</Project>

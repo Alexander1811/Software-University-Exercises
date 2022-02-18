@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>P02_Snake</RootNamespace>
+    <AssemblyName>P02_Snake</AssemblyName>
+  </PropertyGroup>
+
+</Project>
