@@ -1,0 +1,44 @@
+# C# Advanced
+
+The [course](https://softuni.bg/trainings/3210/csharp-advanced-january-2021) teaches the following skills:
+
+- Stacks (first-in, last-out)
+- Stack Methods:
+  - Push, Pop, Peek, ToArray, Contains, Count
+- Queues (first-in, first-out)
+- Queue Methods
+  - Enqueue, Dequeue, Peek, ToArray, Contains, Count
+- Multidimensional Arrays
+  - Creating
+  - Accessing elements
+  - Reading and printing
+- Jagged Arrays (Arrays of Arrays)
+- Dictionaries and Sets
+  - HashSet
+  - SortedSet
+- Streams
+  - Reading and writing
+- Files
+- Directories
+- Functional Programming
+  - Lambda Expressions
+  - Predicate
+  - Action
+  - Func
+  - Passing functions to methods
+- Defining classes
+  - Simple classes
+  - Enumerations
+  - Static classes
+  - Namespaces
+- Generics
+  - Classes
+  - Methods
+  - Constraints
+- Iterators
+  - IEnumerable
+  - Using yield return
+  - Using params
+- Comparators
+  - IComparable
+  - IComparer

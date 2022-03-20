@@ -1,0 +1,46 @@
+# JS Advanced
+
+The [course](https://softuni.bg/trainings/3347/js-advanced-may-2021) teaches programming skills, involving:
+
+- Syntax, Functions and Statements
+  - Data types
+  - Variables
+  - Operators
+  - Functions
+  - Hoisting
+- Arrays
+  - Definition
+  - Accessing elements
+  - Properties and methods
+- Nested Arrays
+  - Definition
+  - Loop through nested arrays
+  - Manipulate data
+- Objects and Composition
+- DOM Introduction
+  - HTML elements
+  - Targeting elements
+- DOM Manipulations and Events
+  - Creating and manipulating elements
+  - Handling events
+  - Event types and event object properties and methods
+- Advanced Functions
+  - Functional programming overview
+  - Closures
+  - Currying and partial applications
+  - Function composition
+  - Execution context
+- Unit Testing and Error Handling
+  - Exception handling
+  - Modules
+  - Unit testing - concepts
+  - Mocha and Chai for unit testing
+- Classes
+  - Defining classes
+  - Properties and accessors
+  - Component approach
+  - Testing classes
+- Prototypes and Inheritance
+  - Inheritance
+  - Classical inheritance
+  - Prototype chain

@@ -1,0 +1,51 @@
+# Entity Framework Core
+
+The [course](https://softuni.bg/trainings/3492/entity-framework-core-october-2021) traces in detail the work with ORM technology:
+
+- ADO.NET (accessing SQL Server from ADO.NET and SQL Injection).
+- ORM Fundamentals
+  - Basic concepts
+  - Writing an ORM framework from scratch
+- Entity Framework Introduction
+  - Reading data
+  - Code-first model vs Database-first model
+  - CRUD operations
+  - EF Core components
+  - EF Core configuration
+  - Database migrations
+- Entity Relations
+  - Object composition
+  - Fluent API
+  - Shadow properties
+  - Attributes
+  - Table relationships
+- LINQ
+  - IEnumerable vs IQueryable
+  - Result model
+- Advanced Querying
+  - Executing native SQL queries
+  - Object state tracking
+  - Bulk operations
+  - Types of loading
+  - Concurrency checks
+  - Cascade operations
+- Auto Mapping Objects
+  - Data Transfer Objects
+  - AutoMapper library
+- JSON Processing
+  - JSON Data Format
+  - JSON.NET
+- XML Processing
+  - XML Attributes
+  - XML in Entity Framework
+- Best Practices And Architecture
+  - Project Structure
+  - EF Core Optimizations
+  - Useful Patterns
+- NoSQL
+  - Relational and non-relational databases
+  - Database scalability
+  - CAP theorem
+  - Distributed systems
+  - NoSQL database types
+  - MongoDB overview
