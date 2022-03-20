@@ -1,6 +1,6 @@
 # C# Programming Basics
 
-The [course](#https://softuni.bg/users/profile/trainings/alexander1811#course-instance-2896) provides basic programming skills, including:
+The [course](https://softuni.bg/trainings/2896/programming-basics-with-c-sharp-april-2020) provides basic programming skills, including:
 
 - working with a development environment (IDE)
 - using variables and data, operators and expressions
